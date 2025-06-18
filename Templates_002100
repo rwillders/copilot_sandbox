@@ -1,0 +1,43 @@
+TEMPLATES_002100 User Updates Name on a Template
+Use Case ID: TEMPLATES_002100
+
+Description: This use case describes the ability of a user to modify the name associated with a Template that is in a Changeset within the ECML system. This functionality allows users to maintain clarity and organization among various templates, ensuring they are easily distinguishable. Updating the name might be necessary for various reasons, such as correcting typos, improving clarity, or reflecting changes in the Template's purpose.
+
+Line(s) of Business: All Lines of Business
+
+Primary Actor(s): Users who edit Templates
+
+Goal: The user needs to be able to update the name of an existing Template that is in a Changeset in the ‘Draft’ status, so that the Template names are easily identifiable, clear, and reflect the Template's purpose. 
+Secondary Actor: N/A
+
+List of Abilities:
+
+Users who edit the Template are able to:
+
+Provide a value that will update the Name property when the Template is published
+Preconditions:
+
+The user is logged into the system and has the necessary permissions to access and modify the Template that is in a ‘Draft’ status.
+Post Conditions:
+
+The specified Template's name is updated on that Template to the new value provided by the user.
+The updated name is reflected in all relevant areas of the draft copy.
+Main Flow/Use Case:
+
+The user navigates to the Template manager and selects a Template that is in a 'Draft’ status.
+
+The system displays the editable properties of the template, including the current name.
+
+The user modifies the content of the Name field with the new desired name for the template.
+
+The system then updates and saves the name of the Template with the new name within the draft copy of the Changeset.
+
+Notes:
+
+The Name property is saved immediately when modified, even while the Changeset is in ‘Draft’ status. The updated name is reflected in the draft copy of the Template within the Changeset.
+Is there a list of validations for creating and editing the name of a template? Yes, all of the items below will be addressed during requirements documentation.
+Such as:
+Exceeds character limits
+Contains invalid characters
+Is a duplicate of an existing name
+Should an error message be displayed if these validations are in place?
