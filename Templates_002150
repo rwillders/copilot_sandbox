@@ -1,0 +1,53 @@
+TEMPLATES_002150 User Manages Template Attributes
+Use Case ID: TEMPLATES_002150
+
+Description: For creating Templates in the Template Manager, there are two kinds of Templates to choose from: Fragment Templates and Full Templates. Fragment Templates are Templates that represent a piece of content that can be included inside of another Template. A Full Template is a Template that represents the full content of a piece of correspondence, possibly including Fragment Templates. Unlike Full Templates, Fragment Templates cannot become a Letter Instance on their own. Attributes are a set of configuration details and content needed to manage a particular type of correspondence. The purpose of this Use Case is for the user to have the ability to manage the attributes aligned to each Template.
+
+Line(s) of Business: All Lines of Business
+
+Primary Actor(s): Changeset Editor
+
+The goal of the Changeset Editor is to assign and manage the respective attributes when creating Templates in the Template Manager so that the Template information is clear, accurate, and identifiable.
+Secondary Actor: N/A
+
+List of Abilities:
+
+The Changeset Editor is able to:
+
+Assign the Template Attribute Template Type at the creation of the Template.
+View the Template Attributes Name, Template Type, Description, and Labels for any Template in ‘Draft’ status aligned to the Line of Business they are working under.
+Update the Template Attribute Types Name, Description, and Labels for any Template in a Changeset aligned to the Line of Business they are working under.
+Preconditions:
+
+The Application(s) for which the user intends to manage Template Attributes must exist.
+Post Conditions:
+
+The Template Attributes are accurate, and the Template is no longer in ‘Draft’ status.
+Main Flow/Use Case:
+
+When the user is creating a Template:
+The user sets the Template Type Attribute for the Template.
+The Template Type Attribute can either be ‘Full’ or ‘Fragment’ and cannot be changed after creation.
+The Templates immutable ID is documented as an attribute on the Template but is not visible to the user.
+When the Template is in a Changeset:
+The user can view the following Template Attributes:
+Name
+Template Type
+Description
+Labels
+The user can update the following Template Attributes:
+Name
+Description
+Labels
+When the Template is outside a Changeset:
+The user can view the following Template Attributes:
+Name
+Template Type
+Description
+Labels
+The user can update the following Template Attributes:
+Labels
+Notes:
+
+The Template Type attribute has two possible values: Full or Fragment. This is something that is identified at the creation of the Template and cannot be changed after creation.
+This use case is set at the Template level, not at the Template Version level.
