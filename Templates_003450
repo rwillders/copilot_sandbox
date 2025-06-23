@@ -1,0 +1,50 @@
+TEMPLATES_003450 User Manages the Style of Content within a template
+Description: For content of a template, users are able to specify the style of content to be applied to the rendered PDF of a Letter Instance. Styling the content of a letter can be done multiple ways and is useful for ensuring clarity, readability, and consistency when creating letters.
+
+Line(s) of Business: All Lines of Businesses
+
+Primary Actor(s):
+
+Changeset Editor
+
+Goal: The user needs the ability to specify the style of content in the rendered PDF of a Letter Instance. 
+List of Abilities:
+
+Changeset editors are able to:
+
+Define the style of the following content in a ‘Draft’ template:
+
+Static Text
+
+Input Placeholders
+
+Data Resource Field Placeholders
+
+Calculation Result Placeholders
+
+Define the paragraph heading style of the content.
+
+Define the font size of the content.
+
+Define the font type of the content from a list of pre-defined fonts.
+
+Define the style of text of the content (Bold, Italicize, Underline). 
+
+Preconditions:
+
+There is a Template to be edited in ‘Draft’ Status. 
+Postconditions: 
+
+The style in a Template will be reflected in the rendered Letter Instance. 
+Main Flow: Set the Settings, Present Content
+
+The user provides the settings for the style of the content to be added to the template.
+
+The user provides content that uses the provided style settings. 
+
+Alternate Flow: Present Content, Set the Settings 
+
+The user selects existing content and updates the style setting for that content. 
+Notes:
+
+The main flow captures the user specifying the style they are going to use before the content is populated vs the alternate flow captures the user’s ability to style existing content to something other than what it’s currently styled as. 
