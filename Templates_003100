@@ -1,0 +1,82 @@
+TEMPLATES_003100: User Manages Rich Text and Input Placeholders in the Content of a Template 
+Use Case ID: TEMPLATES_003100
+
+Description: The content of a Letter Template is comprised of rich text and Input Placeholders. By managing this content, Letter Instances are tailored to the Line of Business’ needs, ensuring recipients receive accurate correspondence.
+
+Line(s) of Business: All Lines of Business
+
+Primary Actor(s): Changeset Editor 
+
+Goal: Users who manage Templates must ensure Templates under their Line of Business are current.
+
+Secondary Actor: N/A
+
+Preconditions:  
+
+A Template within the corresponding ‘Draft’ Changeset has been selected.
+Post Conditions:  
+
+N/A. Users will always be able to manage the content of a Template if the Changeset is in the status of ‘Draft’.
+List of Abilities:
+
+Users who manage Templates are able to:
+
+Manage Rich Text
+Add rich text within the content of a Template.
+Add the location of the rich text within the content of a Template.
+Update the location of the rich text within the content of a Template.
+Format the rich text as it should appear within the content of a Template.
+Update rich text within the content of a Template
+Remove rich text within the content of a Template
+Manage Input Placeholders
+Add Input Placeholders, from a list of available Inputs within the content of a Template.
+Apply Rich Text to Input Placeholder.
+Add the location of the Input Placeholders in the content of a Template.
+Update the location of the Input Placeholders in the content of a Template.
+Remove Input Placeholders within the content of a Template.
+Preconditions
+
+A Template within the corresponding 'Draft' Changeset has been selected.
+Post Conditions
+
+N/A: Users will always be able to manage the content of a Template if the Changeset is in the status of 'Draft'.
+Main Flow:
+
+User is able to utilize any of the main flow segments listed below at any time in the Template editing process and in no particular order.
+
+User who manages rich text in a Template:
+Accesses the Template within its Label 
+Accesses the content of the Template 
+Adds the location of the rich text within the content of the Template 
+Updates the location of the rich text within the content of the Template 
+Adds rich text within the content of a Template 
+Updates rich text within the content of a Template   
+Formats the rich text as it should appear in the content of a Template 
+Removes rich text within the content of a Template 
+User who manages input fields that can be applied to a letter instance by the field user (Input Placeholders) in a Template:
+Accesses the Template within the Label 
+Accesses the content of the Template
+Apply Rich Text to the Input Placeholder
+Adds the location of the Input Placeholder within the content of a Template
+Updates the location of the Input Placeholder within the content of a Template
+Identifies the Input Field for the placeholder
+Removes Input Placeholders within the content of a Template
+Notes:
+
+Input Placeholders can be used to allow the user to provide data to be put directly into the content of the given letter, allow them to make choices between provided values, or input data for calculations necessary to create the Letter Instance.
+Examples include but are not limited to the following Input Placeholders to be configured: 
+List Builder
+Attachment Selection 
+Fragment Selection 
+Option Selection 
+Number
+Date 
+Text
+Input Group 
+Boolean 
+Examples include but are not limited to the following user Input Field formatting options: 
+Bold
+Initialize 
+Underline
+Bulleted list 
+Conditional Logic for Templates will be included in a separate use case.
