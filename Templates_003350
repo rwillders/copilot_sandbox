@@ -1,0 +1,61 @@
+TEMPLATES_003350 User Manages Tables in the Content of a template
+Use Case ID: TEMPLATES_003350
+
+Description: This use case outlines the capabilities required by an editor to manage structured data within a Template using tables. This includes inserting new tables, modifying their initial dimensions, adding, editing, and deleting table rows and columns, entering data into table cells, formatting the table appearance (adding, changing, and removing colors) , and removing tables as needed. These tables contribute to the structured presentation of data within the Letter Instances created from the template.
+
+Line(s) of Business: All Lines of Business
+
+Primary Actor(s): Changeset Editor
+
+Goal: The user has the ability to add, remove, and edit Tables and Table elements with a template.
+Secondary Actor: N/A
+
+List of Abilities:
+
+Users who can edit Templates are able to:
+
+Initiate the table insertion action
+Specify the initial dimensions
+Number of rows
+Number of columns
+Add table rows
+Delete table rows
+Add table columns
+Delete table columns
+Enter data directly into table cells
+Borders
+Resizing rows and columns
+Alignment
+Positioning
+Font styles
+Adding colors
+Changing colors
+Removing colors
+Initiate the modification action for a table
+Initiate the removal action for a table
+Preconditions:
+
+The editor is logged into the system and has the necessary permissions to access and modify the templates.
+A Template is in a Changeset with a 'Draft' status.
+Post Conditions:
+
+The tables within the Template are inserted, modified, or removed as specified by the editor.
+Main Flow/Use Case:
+
+The editor accesses the Template Manager and opens a specific Template for editing.
+The editor navigates to the content area of the Template where they want to manage tables.
+Insert a table.
+
+The dimensions will be displayed within the margins of the template. The table dimensions will align with the maximum dimensions allowed for tables in a template.
+
+Specify the initial columns and rows of the table (e.g., number of rows and columns).
+
+Modify an existing table.
+
+The editor may be able to format the table appearance, including borders, cell alignment, and font styles.
+
+Remove a table
+
+Notes:
+
+Is there a limitation on the size or dimensions of the tables that can be inserted? Yes
