@@ -1,0 +1,84 @@
+TEMPLATES_003110: User Manages Option Selection Group Inputs and their Placeholders, 
+using Manually Provided Options, within a Template
+Use Case ID: TEMPLATES_003110
+Description: While building out a Template in the Template Manager, the Changeset Editor has the 
+ability to create, modify, and retire Templates. One of the input values that can be available for the 
+Changeset Editor to create and utilize in a Template is the Option Selection Group. This input group 
+allows the Changeset Editor to create groups of manually provided option values for the Letter 
+Editor to select from, that may include additional subfields. These groups can be made optional, 
+multiselect, or both. This input group allows the Letter Editor the ability to select from multiple 
+predefined values, designed by the Changeset Editor, while building out a Letter Instance.
+Line(s) of Business: All Lines of Business 
+Primary Actor(s): Changeset Editor
+1.	Goal: The goal of the Changeset Editor is to configure Option Selection Groups so that the 
+Letter Editor has the ability to select from a group of predefined options in order to 
+accurately reflect the information needed specifically for the Letter Instance they are 
+working in.
+Secondary Actor: N/A
+List of Abilities:
+The Changeset Editor is able to:
+1.	Create an Option Selection Group:
+a.	Configure the Option Selection Group:
+i.	Provide Option Selection Group with a Name.
+ii.	Identify if the Option Selection Group is Optional.
+iii.	Identify if the Option Selection Group is Multiselect.
+iv.	Manually provide Option Group Values as choice(s) under the Option 
+Selection Group; can be zero-to-many.
+1.	Provide each Option Group Value with a Name; the Name will be the 
+title of the Option Group Value and will be what the Letter Editor 
+see’s when selecting options in the Option Selection.
+a.	Add additional Subfield(s) to each Option Group Value as 
+nested inputs that will only be exposed if the Option Group 
+Value the subfields are tied to is selected.
+i.	Provide each Subfield with a Name, Data Type, and 
+any additional configuration settings determined by 
+that Data Type.
+1.	This subfield can be of any Data Type that 
+ECM-L supports.
+2.	Add Option Selection Group Placeholder(s) as Conditional Block(s) or Inline Conditional(s) 
+into a specified location in the Content of the Template.
+a.	Configure the Inline or Block Conditional Placeholder to evaluate each Option 
+Group Value:
+i.	Each Option Group Value within the Option Selection Group is available as a 
+Boolean value that is able to be evaluated in any Conditional Content rules. 
+b.	Configure the content portion of an Option Selection Group Placeholder.
+i.	The user will populate the content of an Option Selection Group 
+Placeholder.
+1.	This content can be of any type of content that ECM-L supports.
+3.	Update the configuration of an Option Selection Group Placeholder in the Content of a 
+Template.
+4.	Remove an Option Selection Group Placeholder from the Content of a Template.
+Preconditions
+1.	The user is working in a Template that is in ‘Draft’ status.
+Post Conditions
+1.	The Option Selection Group Input Placeholder(s) have been configured and updated in the 
+Template.
+Main Flow:
+1.	The user selects an Option Selection Group as a new Input field on the Template.
+2.	The user configures the Option Selection Group:
+a.	User provides the Option Selection Group with a Name.
+b.	User identifies if the Option Selection Group is Optional.
+c.	User identifies if the Option Selection Group is Multiselect.
+d.	User manually provides one or more Option Group Value(s) as option(s) for the user 
+to select from.
+i.	User provides each Option Group Value with a Name.
+1.	User adds additional Subfield(s) to an Option Group Value:
+a.	User provides each Subfield with a Name, Data Type, and 
+any additional configuration settings determined by 
+that Data Type.
+3.	The user configures an Option Selection Group Placeholder via Conditional Block or Inline 
+Conditional for each Option Group Value in the Option Selection Group.
+a.	The user inserts each Placeholder into a specified location in the Content of the 
+Template.
+4.	The user populates the content of each Option Selection Group Placeholder.
+5.	The user can update the configuration of the Option Selection Group Placeholder in the 
+Content of the Template.
+6.	If needed, the user can remove an Option Selection Group Placeholder from the Content of 
+a Template.
+7.	The user can continue making updates and adding/removing Option Selection Group 
+Placeholders into the Content of a Template while it is in ‘Draft’ status.
+Notes:
+1.	Option Selection Group Scenario:
+a.	The user is able to select one or more options of information needed from a Veteran. 
+Within each option selected, the user is required to enter the corresponding 
+subfields, if there are any.
