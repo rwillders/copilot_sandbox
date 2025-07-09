@@ -1,0 +1,2405 @@
+Requirements Review – FA Wide-20250709_090242-Meeting Recording
+July 9, 2025, 2:02PM
+1h 32m 46s
+
+Guay, Missy [USA] started transcription
+
+Samuelsen, Aren [USA]   0:04
+Thank you, Missy. Hi everybody.
+Long time no see.
+Today I'm going over the capability to support conditional content in a template.
+So it's very simple.
+There's only one epic, so I'm sure we'll get through it very fast and no questions, but if someone happens to have one, please, by all means.
+Just call out. Interrupt me. I. It's gonna be a lot fair warning.
+So going into the summary of the initiative.
+A template is a set of content and configuration settings designed to function as a rubric used in creating individualized letter instances. Oftentimes, the contents of a letter need to vary based on information provided by a letter editor as part of their design process of a draft template they.
+Change the editor needs the ability to dictate under what conditions the content of a letter instance can vary and what content will display under those various conditions.
+I need to put in capitalize for letter instance but otherwise yeah.
+Benefit statement by allowing the change set editor to create and configure conditional content.
+A template can be designed to be used in multiple scenarios to perform different functions based on the inputs provided.
+This will reduce the number of templates necessary for all lines of business, which will allow easier navigation through storage cost and increase the effectiveness of communications.
+And I have a list of product owners here.
+Any questions about what this initiative is?
+What is attempting to accomplish here?
+That will take silence as a no.
+As in as one initiative or one epic.
+Excuse me.
+The ability to manage conditional content in a draft template, which we will get into here.
+Your statement is as a change set editor.
+I need the ability to define content to be displayed when conditions I set are met so that I am able to create more versatile templates that will adjust their content depending on the values of the specific letter instance using those templates.
+Accept this criteria AC1 while editing a template in the draft status.
+The user is able to insert a conditional placeholder into a specified location in the content of a template.
+The user is able to add a conditional placeholder as either inline conditional which can exist within a string of text, or a block conditional which exists as its own paragraph block.
+
+Blocker, Cheryl (J-Mack)   2:56
+I'm going to jump in where I can hear.
+I just for readability, I recommend that that last AC 1.1.1 you read break that into two ACS 2 sub A's.
+There's some sub sub ACS so that you you know it can be this or that.
+
+Samuelsen, Aren [USA]   3:16
+OK.
+
+Blocker, Cheryl (J-Mack)   3:18
+Just it reducing the length of the paragraph to consume at one time.
+
+Samuelsen, Aren [USA]   3:22
+Because since I do that easy enough.
+
+Blocker, Cheryl (J-Mack)   3:24
+Yep.
+
+Chilton, Sarah [USA]   3:26
+While we're while we're talking, let's put template version in AC1 instead of template, right?
+That's what we decided.
+
+Samuelsen, Aren [USA]   3:33
+Yeah, I gotta do that for all of these last couple, but.
+
+Chilton, Sarah [USA]   3:37
+Just while we're thinking about it. But yes, I like breaking that up.
+I don't like the. I would assume Cheryl, you're probably going to have that feedback on a couple of these.
+Umm.
+
+Blocker, Cheryl (J-Mack)   3:49
+Yeah, I remember thinking it yesterday.
+And you know, kicking myself into the behinds like I wish you know.
+
+Samuelsen, Aren [USA]   3:57
+Well, Sarah and I have been working all morning. Sorry.
+
+Chilton, Sarah [USA]   3:57
+I don't think.
+
+Blocker, Cheryl (J-Mack)   3:58
+Yeah, in general it's a general.
+
+Chilton, Sarah [USA]   4:00
+Yeah, Aaron and I have been focused on different issues and haven't gotten really to that.
+The breakout of a CS yet?
+
+Blocker, Cheryl (J-Mack)   4:08
+That's fine.
+We'll we'll do that. But just as a general rule, this kind of applies to all the requirements folks. You know, AC should address one business need instead of multiple in you know in this case that that's kind of what this is. Sometimes it's hard to discern, but just.
+Keep that in mind. Thank you.
+
+Samuelsen, Aren [USA]   4:28
+Cheryl.
+Going to AC 1.2 for each conditional placeholder.
+The user's able to establish a number of comparative equation score statements to be evaluated, referred to as rules.
+121 when there is more than one rule associated with a conditional placeholder, the user is required to apply one of the following operations to the set of rules.
+An and operation where all grouped items evaluate as true. The overall grouping evaluates as true, else the grouping evaluates as false.
+And an or operation where if at least one grouped item evaluates as true, the overall grouping evaluates as true.
+Else the grouping evaluates as false.
+This is core tenet here.
+So are there any questions?
+Is it clear what this means when you have multiple rules, you will group the rules together and evaluate each of them. If you apply and to the group, then all the rules have to be true for the group to be true. If you apply or to the group.
+Then if anyone rule evaluates as true, then the overall group evaluates is true.
+We'll say this is also how it works in DGNT right now. If you need help visualizing, I know Sarah does have it up handy, but just conceptually is everyone. Is anyone not on board?
+
+Chilton, Sarah [USA]   6:04
+That reminds me. I'm gonna switch to my other computer.
+Please speak up if you want to see this in the DGMT because as I posted in the chat from speaking to Erin, there wasn't a lot that we were really trying to reinvent here, right?
+Most of this does exist until we get down to the last AC.
+So I'm happy to show anything to anyone.
+One at any point, but I'm gonna switch computers so that I can do that.
+
+Samuelsen, Aren [USA]   6:36
+Really appreciate it, Sarah.
+All right, if no one has any questions, I will move on.
+For one dot 2.2.
+The user is able to create additional nested groupings that contain subsets of rules for each grouping of rules the user's required to indicate. If that set should be evaluated with an and operation or an OR operation.
+So there is nested logic here. If you create a subgroup then that group will be evaluated by itself and use that value of either true or false that it returns.
+In any higher level groups.
+I see 123 users able to select an input field of the following field types to be compared in a rule, text, number, date and Boolean.
+The comparative functions available to a rule will vary by field type compared as listed.
+X Field has these 8 equals does not equal, contains does not contain, starts with, ends with.
+Is empty, is not empty.
+Member fields and date fields have this list of eight list has greater than or less than in there. But again, these are all copies straight from DGMT.
+Boolean fields have just an is true or is false as their comparative equations.
+When a rule requires a value to be compared against the users provided the method to either select an input field of the same type is the first input field, or to enter a value of the same type as the input field associated with a rule.
+So for comparative equations like less than.
+You use a number field as the first input less than.
+Then you are able to select either a second number field to compare it to, or provide a static value type in 100 or whatever and use that to compare 2.
+Have I lost anybody so far?
+
+Sarah Chilton   8:58
+Do we think that maybe an example for the AC like you just gave in a note would be helpful?
+
+Samuelsen, Aren [USA]   9:07
+Put an example in the notes. I can take some screenshots of DGMT and put them in here just to like show. Conceptually some of this.
+
+Sarah Chilton   9:14
+Yeah, it's just I'm thinking about people that don't look at this all the time, right?
+And trying to digest these requirements. So anything that we can do to maybe assist them in that would be helpful.
+
+Blocker, Cheryl (J-Mack)   9:26
+Yeah, I I absolutely. I was thinking the same thing about adding examples at the bottom.
+You know as notes.
+I and people may have different views on this.
+I would not.
+Put any screenshots of DGMT anywhere.
+
+Samuelsen, Aren [USA]   9:52
+Boys in the well.
+
+Blocker, Cheryl (J-Mack)   9:53
+Yeah, kind of like we we need to be able to stand on our own.
+
+Samuelsen, Aren [USA]   9:54
+Thank you, chair.
+
+Blocker, Cheryl (J-Mack)   9:58
+On two feet without relying all on DGMT.
+Although we know we do, but we need to be able to explain it without DGMT in my opinion. Thanks.
+
+Samuelsen, Aren [USA]   10:06
+Completely fair. I know we don't want to make the same mistakes there, but honestly, the way conditional logic works in DGMT is pretty bulletproof. To my looking at it.
+There enhancements to be made, but I don't think there's anything wrong with way that you've done it.
+
+Blocker, Cheryl (J-Mack)   10:24
+I'm. I'm sure they will appreciate that and I think I I personally appreciate that.
+But you know, as our the dev teams get to know us, I think they'll. Yeah, I think it's great. Let's talk about.
+Not but want to, OK.
+
+Sarah Chilton   10:40
+We can come back to that. Erin knows what I'm mentioning. Tim is here.
+
+Blocker, Cheryl (J-Mack)   10:41
+Let's.
+
+Sarah Chilton   10:44
+Tim, I'm putting you in the hot seat.
+I'll not.
+At some point, so we can come back to that.
+
+Adeyemo, Tim [USA]   10:52
+That's fair.
+Exactly as expected.
+
+Sarah Chilton   10:56
+I know.
+I so appreciate you being here.
+Honestly, I know.
+Unfortunately, conditional content is often your baby whether you want it or not.
+
+Adeyemo, Tim [USA]   11:07
+Adopted. Let's just say that no, I I think the points made have been pretty accurate.
+I I'm probably on the fence of not including an example straight from DGMT I think.
+The idea that Sarah's getting across is maybe there is a way.
+To bring a very technical kind of idea right?
+Conditional logic is something that is natural for.
+Developers and architects to kind of operate in, but I I think it may get a little bit non-technical use may get a little bit lost in the weeds with this because.
+It it, there's a lot of implications when you start talking about conditional logic.
+So I think.
+
+Samuelsen, Aren [USA]   11:53
+Yeah.
+
+Adeyemo, Tim [USA]   11:56
+Small examples of like.
+Monthly expense one and monthly expense 2 or #1 and #2.
+Simple text based examples may be prove illuminating.
+
+Blocker, Cheryl (J-Mack)   12:10
+Absolutely.
+
+Samuelsen, Aren [USA]   12:15
+I'll keep that in the back of mine, definitely if anyone has any insights or suggestions on how to implement best those visual aids. Happy to hear from anybody.
+Going back to this AC151, when evaluating a rule involving text, comparative operations will ignore differences in capitalization.
+On three, we are outside the establishing rules. Here the users provided a method to intercontent including further conditional fields that will appear in a letter created from the current template when the set of rules in the conditional placeholder evaluates is true.
+We've established what rules are going in.
+This is saying you can provide content to show when the rules evaluate is true.
+What the what is the actual content you want to display?
+
+Blocker, Cheryl (J-Mack)   13:15
+OK.
+
+Samuelsen, Aren [USA]   13:15
+And those conditions are met.
+
+Blocker, Cheryl (J-Mack)   13:17
+In the spirit of.
+Making the AC as succinct.
+And maybe you know as possible.
+Consider the instead of embedding, including further conditional fields as part of AC 3, making it a having some bullets. Yeah, 3.
+
+Samuelsen, Aren [USA]   13:39
+1.
+Yeah.
+I can do that.
+Makes sense?
+I know we definitely want to include it somewhere because if we don't, it probably won't be in.
+
+Blocker, Cheryl (J-Mack)   13:47
+Yeah. Oh, no. We got we all right.
+We got a whole series of hands up. Jacob's up first.
+
+Palmer, Jacob [USA]   13:54
+Hopefully this is quick.
+Does this AC 3 here apply specifically for block conditionals?
+
+Samuelsen, Aren [USA]   14:02
+It should apply to either of them.
+Whichever conditional, whether it's in line or block, you do need to provide the content to display when the conditional evaluates is true.
+I know.
+
+Palmer, Jacob [USA]   14:15
+OK.
+
+Samuelsen, Aren [USA]   14:16
+Inlines it.
+It's a little weird looking in inlines and it has an inline and then an inline input next to it just says a line there rather than like above and below. They are left and right, but it is still doable with each.
+
+Palmer, Jacob [USA]   14:29
+That's right.
+I remember that now.
+Thank you, Erin.
+
+Samuelsen, Aren [USA]   14:35
+We had another hand.
+I think it was Sarah.
+Are you did that?
+
+Blocker, Cheryl (J-Mack)   14:38
+Monica. Monica is next.
+
+Brescia, Monica [USA]   14:40
+Yeah, I just put it in the chat.
+Mine was for AC125 I think.
+
+Samuelsen, Aren [USA]   14:49
+OK.
+
+Brescia, Monica [USA]   14:51
+Just.
+In breaking it out or and I was just a little confused by this, entering the value that's associated with the rule and the first one is.
+Of the same the hold on the same type as the first input and the second one is the same type as the input associated with the rule.
+So I just threw something in the in the chat.
+
+Samuelsen, Aren [USA]   15:17
+It was inconsistent.
+
+Brescia, Monica [USA]   15:20
+I don't if if are they both.
+Should whatever selection is made be the type of the original input?
+
+Samuelsen, Aren [USA]   15:30
+Correct. So it's saying if the first input is a number, the second input you're comparing it to should also be a number, or if you're manually entering it yourself, you should be restricted to putting in a number.
+
+Brescia, Monica [USA]   15:45
+Right. I just think it's not that clear 'cause. The second one is not referring to.
+The original input type or the first input field it's referring to the field associated with the rule.
+I would just make those consistent.
+
+Samuelsen, Aren [USA]   16:01
+Yeah, I do. See what you're saying.
+OK, I might think on that.
+
+Brescia, Monica [USA]   16:08
+And I would maybe break it out. They're two.
+They're given two options.
+
+Samuelsen, Aren [USA]   16:13
+I might do it that way.
+That makes sense.
+Are there any more questions?
+Hans, I can't see.
+
+Sarah Chilton   16:26
+Oh, hey, I was just gonna.
+I was just gonna say something.
+It's not really related to anything. You just went over while we were talking about it.
+Is it possible to go back and touch on the couple things that I talked about in the chat before you start on AC-5?
+Because I feel like we should cut.
+We should talk about everything that has to do with anything other than AC-5 before we hit that one, because that one's gonna be a doozy that I really want him and Vinnie to think about.
+
+Samuelsen, Aren [USA]   16:53
+On four, but I'm happy to go back now.
+
+Sarah Chilton   16:56
+No, you don't. I'm fine.
+I was just we happen to all be talking so I didn't want to interrupt you again later, you know.
+
+Samuelsen, Aren [USA]   17:03
+No, listen, I'm happy to do it, but I can't see chat while I'm presenting.
+So you to tell me what we're talking about?
+
+Sarah Chilton   17:10
+Well, we had talked about and or as rules. I brought up the fact that right now we have not in DGMT I do not use not for anything.
+Tim and Vinnie, is there any reason that you guys can think of of why we have not?
+Given that, OK.
+
+Adeyemo, Tim [USA]   17:33
+I think on a purely technical use case, if you're creating a system that uses conditional logic, you kind of have to have those building blocks of and or or, not.
+It's it's kind of just crucial to logic gates, but.
+I want to also hear Vinnie's opinion on this.
+
+Sorrentino, Vincent [USA]   17:57
+Yeah, I mean, I definitely get the tendency, but I'm wondering from like a business use case, if not can be used, you know almost for filtering.
+
+Jeremy Ackerman-Yost   18:10
+Yeah, there's absolutely not logic in some of the old decision points and stuff that maybe have never been implemented in in DGMT.
+
+Sorrentino, Vincent [USA]   18:11
+If.
+You're.
+Yeah.
+
+Jeremy Ackerman-Yost   18:19
+But they're they're yeah, they're what?
+Absolutely be that logic.
+
+Samuelsen, Aren [USA]   18:24
+Was was Sarah brought it up before this meeting shortly and I said like most of these comparative equations, do have opposites.
+So equals is the same as not not equalled there, but there are a couple like starts with and ends with that don't have equivalents.
+
+Jeremy Ackerman-Yost   18:30
+Yeah you could use.
+Hmm.
+I mean, as someone who took formal logic at some point, rather than not having not hurts my brain.
+But if if none of the users are using it and they're using comparatives instead to accomplish the same goal.
+Yeah.
+
+Blocker, Cheryl (J-Mack)   19:10
+If can I not offering an opinion, but if we wanted to incorporate this quote not?
+Value in the conditional logic. Can we make it a separate epic?
+Would it make sense to keep it separate?
+From this epic.
+
+James, Doug [USA]   19:35
+Is is, is, not, is not currently in DGMT.
+
+Jeremy Ackerman-Yost   19:36
+From that epic.
+
+Blocker, Cheryl (J-Mack)   19:36
+So we're going to move forward just looking for a way.
+I'm hearing it is.
+
+Adeyemo, Tim [USA]   19:44
+The not operation is currently in DGMT mode.
+
+Sarah Chilton   19:47
+Yeah, that's that's why I brought it up for discussion because we don't is currently in DGMTI have never used. It doesn't mean I might not ever need to use it.
+But 200 letters deep? I haven't used it.
+How about that?
+
+James, Doug [USA]   20:03
+Let let's move it to another initiative and keep moving.
+
+Samuelsen, Aren [USA]   20:03
+Hello.
+But I don't think it would be a heavy ad here. If I read it 122.
+It's just another thing that applies to groupings.
+
+Sarah Chilton   20:11
+Yeah. Why are we moving to another?
+Why are we moving it to another one?
+
+Blocker, Cheryl (J-Mack)   20:16
+I don't know all the inner workings of it, so I was just asking the question. Would it fit in here or would it be more appropriate to leave this?
+As it is or or you know, put that as a separate add on to conditional on Epic that has additional requirements to add on to this instead of trying to incorporate not into this already complex requirement.
+That's all.
+
+James, Doug [USA]   20:41
+And I was thinking I was thinking if Sarah hasn't used it in 200 letters, it could be delayed.
+
+Blocker, Cheryl (J-Mack)   20:42
+It was a question, not a suggestion.
+
+Sarah Chilton   20:50
+What's the lift Vinny and and Tim of us moving it out and doing it later, doing it when we do and or you guys can also weigh in on like, when does it make sense for us to do it?
+Right. Is it?
+Astronomically more complicated for us to do, not while we're doing Ander or right.
+Did I lose him or Vinnie? OK.
+
+Sorrentino, Vincent [USA]   21:21
+No, we're here.
+I'm just sort of thinking about the implementation, but yeah, I mean, if we're already setting up all of the, you know, logic and code to handle the other conditionals, I I don't think.
+It would be a big deal to also handle the not case.
+It actually might.
+
+Samuelsen, Aren [USA]   21:44
+Would just be if would just be a.
+Would just be a flip at the end and evaluate all the conditionals and if it's true, change the false.
+If it's false, change it to true, right and the not applies to each group.
+Be like a last step.
+
+Adeyemo, Tim [USA]   21:58
+Pretty.
+Kinda yes.
+Yeah.
+
+Sorrentino, Vincent [USA]   22:06
+That's the oversimplification of it, but yeah.
+
+Adeyemo, Tim [USA]   22:06
+So yes, we it yeah when you.
+
+James, Doug [USA]   22:09
+Well said, Tim. Well said.
+
+Adeyemo, Tim [USA]   22:12
+So in DGMT, a lot of the actual conditional logic is built around a third party library which leverages a lot of.
+Base operations included with that is the and and or conjunction.
+For different groups you can create like we have here nested groups for different conditions that not operation or that not conjunction can be added to an and or an or. So you could do not and or not or for nested conditions.
+
+Samuelsen, Aren [USA]   22:50
+Alright, OK.
+
+Adeyemo, Tim [USA]   22:51
+This gets very complicated and this kind of alludes to why Sarah doesn't need it because.
+If you set up your your condition.
+Well, you can sort of get around that kind of inverted logic. That being said.
+
+Samuelsen, Aren [USA]   23:05
+Yeah.
+
+Adeyemo, Tim [USA]   23:08
+It does kind of feel weird to not not include this here because it is simpler.
+It it just fits in more.
+With working on A and conjunction logic or an or conjunction logic.
+
+Samuelsen, Aren [USA]   23:29
+Do it while you're in there.
+
+Adeyemo, Tim [USA]   23:30
+Pretty much, yeah.
+So I don't want to say that there's never gonna be a situation where we don't need not.
+God, this isn't making my brain hurt.
+The speech, part of my brain, but it it it's there's not necessarily a situation where we don't need it, but as we can see if a user is knowledgeable about conditional logic then they don't necessarily need to have that knot.
+But I don't think that we necessarily want to put ourselves in a corner where we don't have.
+An inverse conjunction if that kind of makes sense.
+I know that was a lot.
+
+Sarah Chilton   24:07
+It sounds like you're saying if we're going to add it, we should add it here, right?
+
+Adeyemo, Tim [USA]   24:12
+Pretty much.
+
+Samuelsen, Aren [USA]   24:15
+I think that's a heavy lift.
+Lift the.
+Add it to the requirements.
+Something else?
+The implementation.
+
+Jeremy Ackerman-Yost   24:20
+For what little it's worth, like, tell me that we're gonna have and and or but not have not is like, oh, yeah, we just don't need 3.
+Three is not not important.
+We we can have one and two and and jump straight to four and and and our numbers will work just fine. Like you know, I mean like we we're gonna leave out a core component of formal logic.
+What?
+
+Samuelsen, Aren [USA]   24:42
+Easy enough.
+Is there anything else, Sir? Do you want to talk about before we get into the?
+
+Sarah Chilton   24:55
+Yeah, I had just and and this was just another thought that I had and we were going back and forth this morning and.
+
+Samuelsen, Aren [USA]   24:55
+Groupings.
+
+Sarah Chilton   25:02
+Do we need to talk about at all where we can use text in the rules?
+Are we not going that granular?
+Right. So there's only certain types of input field where you can.
+Type out. You know what you're comparing against is text.
+Right. So it's like right now?
+All that would be like single line text.
+So I guess the text field right?
+And then that's what brought me into the single option multi-option list and my panicking there that I was doing, because that's another one you could use text for.
+
+Samuelsen, Aren [USA]   25:30
+Yeah.
+I know the underlying structures in ECML are going to be different than DGMT's, so I so I don't think we necessarily have to track those one to one.
+
+Sarah Chilton   25:48
+I know.
+
+Samuelsen, Aren [USA]   25:53
+We just have for the new input types that we have. We have to consider the logic of each of them.
+So I know this this requirement is just covering the poor basic ones.
+When we get to stuff like all this, you have to deal with things like this list contain this value or contain these multiple values.
+Which?
+
+Sarah Chilton   26:12
+Oh yeah. Like, OK.
+Sorry, let's just focus on what you've got here.
+
+Samuelsen, Aren [USA]   26:14
+I.
+
+Sarah Chilton   26:16
+Do we need to call out that text fields? Here are the only ones that you can enter a text in the rule comparison, right?
+So every other one like is like is true or false when I'm setting the condition right?
+And then the other ones is you know.
+Percent we can have equals does not equals as you've called out.
+But then I can enter actual text to compare against in the rule. Am I making sense or should I share my screen?
+
+Samuelsen, Aren [USA]   26:50
+Show me what you're talking about. I think that's what this six was intended to accomplish.
+Is that when you provide an input, the input you provide to compare against needs to be of the same type as the input you're comparing Giggs.
+
+Sarah Chilton   27:00
+OK, if you're covering it there, then that's fine. And that makes sense to me, right?
+I guess I just order.
+I'm real hung up on a couple of things outside of this that are making me panic right now, so if.
+If you are, if you are covering that there, then I think we're OK because I think and Tim, correct me if I'm wrong out of these several things we're covering here, that's the only text.
+Is the only one that you can enter free text in the rule for comparison.
+
+Samuelsen, Aren [USA]   27:38
+I mean, you're I don't.
+You have to be able to enter numbers and like.
+
+Adeyemo, Tim [USA]   27:44
+I.
+I I think she means specifically.
+Alphanumeric text, so I think it goes back to what you were talking about with static values.
+Right, Sir.
+So you can like say OK.
+I want to compare.
+
+Sarah Chilton   28:01
+Sorry, I grabbed the screen.
+
+Adeyemo, Tim [USA]   28:02
+A.
+OK, perfect.
+
+Sarah Chilton   28:04
+Go ahead, Tim.
+
+Adeyemo, Tim [USA]   28:06
+Yeah. You wanna be able to compare a, say single line text field with a specific instance of a alphanumeric in that text value box, right?
+And I think we may have that covered.
+In one of the ACS.
+Let me just.
+Make sure that would be.
+Imperative function.
+So AC 1.2.4.1.
+Those options by default should accept a static text, correct?
+
+Sarah Chilton   28:59
+All right.
+Do I?
+I can't see anymore.
+So, Erin, you and then let me know if I need to just stop sharing.
+
+Samuelsen, Aren [USA]   29:02
+You don't want to take it back.
+
+Sarah Chilton   29:06
+But you see what I'm talking about really quickly was the in the single line text I can enter text in the in the rule comparison and everything else.
+It's just the true or false, right?
+The operator we've covered, I was just making sure that we had covered somewhere.
+The text value and.
+
+Sorrentino, Vincent [USA]   29:32
+I think Aaron covered that in one of the AC.
+Sarah, I don't remember exactly which one 'cause I'm not.
+
+Sarah Chilton   29:35
+OK.
+
+Sorrentino, Vincent [USA]   29:37
+It's not up on the screen, but.
+
+Sarah Chilton   29:40
+OK.
+Yeah. I mean if if if everybody feels like that's covered somewhere, that's fine. I just.
+Like I said, I'm having some some offline freak outs about single option lists and multi- option lists and things like that at the moment too.
+
+Sorrentino, Vincent [USA]   29:49
+Yeah.
+Yeah, I think that was the one where where it it says that you can select another field or enter in text.
+
+Sarah Chilton   30:03
+Yeah, this one.
+Yeah, I know that you.
+
+Samuelsen, Aren [USA]   30:06
+Look prefer than looks right now.
+
+Sarah Chilton   30:06
+I know that you can answer.
+I know that you can enter text and we covered entering in text but I was just making sure that we covered that or wanted to talk about whether we needed to cover that.
+We can only enter in text for the text field itself.
+But it sounds like everybody feels pretty good about that being covered here, whether it's as granular or like as in your face as I wanted it to be.
+
+Sorrentino, Vincent [USA]   30:23
+Gotcha.
+
+Sarah Chilton   30:33
+Is like not a big deal to me, right?
+As long as everybody feels like that's covered.
+
+Samuelsen, Aren [USA]   30:41
+It's gonna depend on the comparative comparative function you select whether you have to provide a third value or not, or a second value for like is null or is not null.
+There's nothing to compare against, right?
+So you don't need to have any inputs for those comparative equations, but for things like equals or for less than or equal to, you have to provide a second value to compare against. And when you do provide that second value.
+It should be able.
+You should be able to type those in whenever you need it for text, yes.
+But for anything that has those functions.
+
+Sarah Chilton   31:17
+I'm fine.
+Let's move on.
+
+Samuelsen, Aren [USA]   31:18
+OK, OK.
+
+Sarah Chilton   31:20
+If everybody else is fine, I'm fine. We can move on.
+
+Samuelsen, Aren [USA]   31:24
+Was there anything else you wanted to talk about before we get to the big stuff?
+
+Sarah Chilton   31:27
+No, I think you and I have knocked this out.
+We've beaten it to death a lot of prior to this.
+Now I do want Tim or Vinny or obviously anybody else.
+I'm not trying to.
+You know, silence.
+Anyone else but Tim or Vinnie?
+Is there anything you guys want to talk about before we get into the doozy that is number 5?
+Because #5 we don't do now so.
+
+Sorrentino, Vincent [USA]   31:56
+No, I think I'm good.
+
+Adeyemo, Tim [USA]   31:58
+Same.
+
+Sarah Chilton   31:59
+Alright, good. I was just wanna remind you guys that this is how this ideally if the business doesn't ask for changes, this is how you're gonna get your requirements.
+So if we're missing anything or we've, you know, not translated something properly, speak up. So OK.
+
+Samuelsen, Aren [USA]   32:18
+Think I've ever presented requirements where we're building a sense of anticipation, like it's like, oh, we're gonna get to 5.
+
+Sarah Chilton   32:23
+Sorry, I'm really putting you under the fire here, Aaron.
+
+Samuelsen, Aren [USA]   32:29
+Alright, AZ 1.4, the users provided a method to indicate if there is conditional content to be displayed. If the overall conditional evaluates is false.
+So you can always provide conditional content to display. If it's true, there's also a function that displays digital content if it evaluates is false.
+Then, if indicated, users provided a method to enter content that will appear in a letter created from the current template.
+When the rules evaluated false and I'll rewrite this one in the same way, I'll write rewrite this one to whole conditional fields into its own sub bullet.
+1.5.
+Additional placeholders will interact with input groups in the following manner.
+If a conditional placeholder is placed within the content portion of an input group placeholder, the user will be able to select the input fields contained within that input group to be compared in. Rules within that conditional placeholder. When used to create a letter instance, the conditional placeholder will.
+Perform that comparison for each occurrence of that input group.
+So hope it is inside an input group placeholder.
+We want the conditional to evaluate for each loop of that input group.
+Conditional placeholder is placed outside the content portion of an input group placeholder. The user's able to select the input fields held within the input group to be compared. In a rule, if a set of rules contains an input field from within an input group, that set of.
+Rules will be evaluated for each occurrence within that group, and if the rules evaluates as true for any occurrence, then the overall conditional placeholder will evaluate as true.
+
+Blocker, Cheryl (J-Mack)   34:26
+Gotta have examples of these down there in the notes.
+
+Samuelsen, Aren [USA]   34:29
+Yes.
+
+Sarah Chilton   34:30
+Also, for Tim and Vinnie.
+Remember input groups are repeating groups.
+
+Samuelsen, Aren [USA]   34:35
+Yes.
+
+Sarah Chilton   34:36
+And we don't currently do this on repeating groups.
+
+Sorrentino, Vincent [USA]   34:37
+Yep.
+
+Samuelsen, Aren [USA]   34:41
+Short.
+
+Sarah Chilton   34:42
+So just wanted to make sure we had the terminology translating for them there, sorry.
+
+Samuelsen, Aren [USA]   34:48
+Short for five, one. When the placeholder is within the input group, it will evaluate as a four each.
+It will go through each of them and evaluate them independently. If it is outside of a input group and use an input group input field from an in Group, it will do an, if any.
+One is 4 each.
+Two is if any.
+
+Blocker, Cheryl (J-Mack)   35:10
+Again, this is this is for the the sake of readability.
+Like 5.15 dot two, I think 5.1 could be 4 minutes, like if a conditional placeholder is placed within the content portion of an input group placeholder, then we have a series of sub bullets the user is able to blah blah blah blah BL.
+When used to create a letter, blah blah blah blah.
+In other words, it looks like maybe 2 sub bullets to help break it into consumable chunks.
+Does that make sense?
+
+Samuelsen, Aren [USA]   35:44
+A look at it.
+So the first part you mentioned is the actual AC part.
+This second part is like context like this is not this sentence right here is not technically attestable thing until you actually make instances for it.
+You're just. It's explained how it's going to work when you get there, because this needs context.
+
+Blocker, Cheryl (J-Mack)   36:00
+Which is a problem, yeah.
+I would put that.
+Yeah, maybe we somehow to put it as a note way down at the bottom is gonna be disjointed for the audience reading it, but maybe putting in parens and italics we can get by with that, and people won't yell and scream at us.
+Jeremy, don't yell and scream at us, but.
+Dan Murphy, don't yell and scream at us just because it's not testable.
+It's just you.
+
+Samuelsen, Aren [USA]   36:44
+5/3 just for everyone's sanity is a conditional placeholder.
+Rule set may only evaluate.
+I need to change.
+I've removed instance fields.
+I'll change what this is called, but it can only evaluate input fields from input groups from a single input group at a time.
+If an instance field is selected to be evaluated, this is fields from other input groups will no longer be available to that rule set, just so you can't have two different groups in one rule set.
+That's just a degree of complexity that.
+I don't think anyone wants to deal with.
+Oh, I have dependencies on input fields and input placeholders and input groups.
+Let's see.
+The notes are saying this is not covering.
+Sorry, there we go.
+The price do not cover ability. Use option selects calculations or data resource fields. Once those functions are added, EPIX using those functionality to improve conditional placeholder should be drafted.
+And is also not covering conditional content for dynamic tables. Tables created from input groups.
+
+Adeyemo, Tim [USA]   38:03
+Hey, Erin.
+
+Samuelsen, Aren [USA]   38:03
+And that will require its own set of performance.
+
+Adeyemo, Tim [USA]   38:08
+Do you mind going back up to #5?
+
+Samuelsen, Aren [USA]   38:12
+No, that's all.
+
+Adeyemo, Tim [USA]   38:15
+So using an example of say we have within a letter.
+Or P group or infra group called monthly expenses and we have a field, an instance item, let's say called.
+Income or or expense item. Let's even say that.
+
+Samuelsen, Aren [USA]   38:30
+Right.
+
+Adeyemo, Tim [USA]   38:34
+For 5.1, we are doing a four each for each instance item, right?
+
+Samuelsen, Aren [USA]   38:36
+Mm-hmm.
+Right. That's how the input group placeholders function normally.
+Input group placeholders will function As for loops and go through each loop. If you place a conditional inside that loop, then that conditional should use the values for the occurrence you're on in that loop, essentially.
+So it should use that.
+Instance field for instance, one on the first time you go through and use the value on instance 2. The second time you go through, etc.
+
+Adeyemo, Tim [USA]   39:21
+OK.
+If we.
+Have.
+Another repeating group, let's call this income.
+And we have both of them that we want to have a condition for both of them.
+Would this AC also cover this?
+So basically the the root of the question is nested conditional evaluation and I think we have this on that Third Point, right?
+
+Samuelsen, Aren [USA]   39:59
+Think mustard should still work if you have a nested with it, it still has the context of where it lives.
+But if you had two independent groups, I think you don't want to use both.
+But in your example, if there is an income subset of input groups that still has its own, would have its own placeholder, and if it exists within that placeholder there.
+Then it would function as five one and if it exists, like if it exists in the top level placeholder.
+But not the income, if it exists in the higher level one, then it would function as 5/2.
+
+Adeyemo, Tim [USA]   40:40
+And I think it's.
+This amount of kind of.
+Nuance I think that if there's anything that we can sort of separate into its own.
+Unit I I think it would be this 'cause I it this is one of the probably most challenging aspects of DGMT and I I envision just in any kind of pool that uses the kind of.
+Like nested conditional logic, nested groups are always the most difficult for both to for developers to develop and also for users to use appropriately. I I think that there's a lot of.
+Challenges challenges isn't the right word. A lot of complexity that's kind of lurking underneath the surface, so I don't know if that's a option that we can maybe separate this out into something else, but that would be my kind of a recommendation.
+
+Samuelsen, Aren [USA]   41:41
+You do you mean pull this five out into its own epic altogether? Like, deal with it in its own place?
+
+Sarah Chilton   41:49
+Is there an initiative for input groups that we could while we're working input groups, deal with the conditional with that then is that something that makes sense, Tim?
+So that we if you want to move it out, right?
+
+Samuelsen, Aren [USA]   42:10
+One has a dependency on the input group epic that we went over yesterday.
+
+Adeyemo, Tim [USA]   42:15
+Hmm.
+
+Samuelsen, Aren [USA]   42:17
+Like in, pokers have to exist before it can interact with it.
+
+Sarah Chilton   42:18
+Oh, it's all still.
+Oh, look, it was going to be its own initiative though, right?
+
+Samuelsen, Aren [USA]   42:22
+Right, I need to pull it out and do its own thing.
+
+Sarah Chilton   42:25
+So at some point, Tim, we are going to take this giant initiative that deals with the simple inputs, address fields and input groups and make it 3 different initiatives.
+As anyway, right?
+I think.
+And then would it be helpful to to make this its own epic under the initiative for input groups?
+
+Samuelsen, Aren [USA]   42:50
+I think it would be under that.
+Well, I'm so you weren't talking to me.
+
+Sarah Chilton   42:54
+I don't.
+I don't care.
+
+Samuelsen, Aren [USA]   42:55
+But.
+
+Sarah Chilton   42:55
+I was just offering a solution right wherever Tim wants us.
+I mean, we can talk through where it makes sense to put it.
+I was just offering an option.
+
+Adeyemo, Tim [USA]   43:05
+I'm curious.
+
+Samuelsen, Aren [USA]   43:05
+I would.
+Go ahead.
+
+Adeyemo, Tim [USA]   43:08
+I'm curious to see what Vinnie's thoughts are on this.
+
+Sorrentino, Vincent [USA]   43:13
+Yeah, I I like the idea of splitting out the input group conditionals.
+
+Sarah Chilton   43:14
+OK.
+
+Sorrentino, Vincent [USA]   43:17
+I just don't know if like the requirement itself is the place to do that, or if that's something we could do on like a VBMSD level.
+
+Adeyemo, Tim [USA]   43:25
+That may be a better solution.
+
+Sarah Chilton   43:30
+OK.
+
+Samuelsen, Aren [USA]   43:39
+Just will say for this requirement to make sense, both conditional placeholders and input groups have to exist every. This is. This is where these two things meet is this requirement.
+
+Sarah Chilton   43:49
+Awesome.
+
+Adeyemo, Tim [USA]   43:49
+Yeah, pretty much.
+
+Samuelsen, Aren [USA]   43:50
+So I do.
+I think it would make sense to pull out to its own thing, but if I move this right now, this is where they meet and it's doing it under the conditional one. If you put it under the input Group One, it's the same problem. It's still where these.
+Two things meet.
+It just means you have to do the conditionals before you can do input groups.
+
+Adeyemo, Tim [USA]   44:10
+Yep.
+
+Sorrentino, Vincent [USA]   44:11
+Yeah, I don't like the idea of coupling the conditionals with the groups themselves, like moving this into the other app.
+
+Sarah Chilton   44:20
+OK.
+Well, that's good to know because that was how we were going to maybe approach any add-ons to conditionals, right?
+
+Sorrentino, Vincent [USA]   44:21
+Units it.
+
+Sarah Chilton   44:28
+Because we won't have kind of this overarching like we do now with the, we're going to cover the conditionals for the simple inputs, right.
+We were then, OK, we've done that.
+Now we've got to do option selection groups, but we're also got to cover conditionals for those.
+So.
+We'll maybe we need to take that into consideration when we organize the requirements.
+For that.
+You want to just have epics or I mean sorry initiatives for that itself.
+The conditional part, yeah, as we add on to it.
+
+Sorrentino, Vincent [USA]   45:01
+For the conditionals, I think so I think it's a bit cleaner.
+You know, that way we can as like a dev team. We can focus more on the component itself and then have to worry about the conditionals instead of trying to do that all in the same time.
+
+Sarah Chilton   45:24
+OK.
+Cheryl, did you catch that?
+
+Sorrentino, Vincent [USA]   45:25
+But again, I I think more on a VBMSD level than I do on the R level.
+So whatever makes more sense. You know, for you guys as like a business functionality.
+
+Sarah Chilton   45:31
+Oh, OK.
+
+Sorrentino, Vincent [USA]   45:39
+That's going to be up to you guys and then we can always, you know, split things up accordingly from the epic level down.
+
+Sarah Chilton   45:45
+OK.
+Well then, never mind. I thought you were talking about.
+
+Blocker, Cheryl (J-Mack)   45:48
+Well.
+This may not be needed for all the group, but I think everybody can hear this because.
+There's a strategy that we.
+As we present.
+Our requirements out to the business, we have to strategize on how to present it not only in a, you know, in a consumable fashion as you've been hearing a lot that word today.
+And I'm I would want, I would think if we present.
+The requirement without.
+The you know this AC five that we're viewing here putting, putting that in a separate epic would let us first present the basic stuff.
+Show the examples.
+Are you comfortable with this, Palmer?
+Harry Sue, whatever their names are.
+OK.
+You sure? OK.
+Now you're ready. Let's go to the next level and and do it that way.
+What do you think about?
+I mean, that's a strategy.
+That might work.
+
+Jeremy Ackerman-Yost   47:09
+For what it's worth, Cheryl, I I think your strategy is a good idea, but the notion of getting them comfortable with this is.
+
+Blocker, Cheryl (J-Mack)   47:18
+Don't, don't. Don't go there. Don't go there.
+Has anybody ever looked at NWQ?
+
+Jeremy Ackerman-Yost   47:28
+Yeah. Love in the beauty.
+
+Blocker, Cheryl (J-Mack)   47:29
+Yeah.
+
+Samuelsen, Aren [USA]   47:29
+Deeply, but yes.
+
+Blocker, Cheryl (J-Mack)   47:31
+Yeah.
+
+McCants, Maggie [USA]   47:31
+Yeah. Then I ran away after I saw it.
+I'm just kidding.
+
+Blocker, Cheryl (J-Mack)   47:34
+I mean, it's got this conditional logic in it, OK.
+So let's just.
+Can we just not? Yeah, they they.
+These are requirements they that that we need and we're going to do the best we can to explain them and.
+They'll get it.
+Don't underestimate him. They'll get it.
+Some of them will.
+
+Sarah Chilton   48:04
+So we can organize the VBMSD epics however you guys want them.
+Tim and Vinny, if you don't have an issue with like the way we've organized it from an Loe perspective or actually taking on the initiative as it's set up out right now, right, like from that level, then I think we're OK to keep moving with the.
+Way we wanted and then however, you guys want us to break out the BBMSD.
+We can do that.
+Is that all you guys wanted?
+That's what I'm hearing now.
+
+Sorrentino, Vincent [USA]   48:36
+Yeah, that's fine with me. And like you said, we'll just face the Loe on the whole thing.
+
+Sarah Chilton   48:37
+OK, OK.
+I just.
+Yeah, I was just concerned that there was some sort of issue with us including it in the initiative altogether and that's what caused my concern.
+But if it's just from the BBMSD, we can do whatever we want.
+
+Blocker, Cheryl (J-Mack)   48:59
+Actually this went a lot smoother than Sarah had prepared me for.
+
+Sarah Chilton   49:05
+I know.
+Listen. Hey. Happy surprises, right?
+I am an anxious human and I like to look at everything from the worst case scenario. As most of you know.
+So I just really wanted.
+
+McCants, Maggie [USA]   49:16
+You balance us out.
+
+Sarah Chilton   49:19
+Yeah. I just really wanted them here to make sure that they were good with this because this was, you know, we don't do this now.
+So.
+
+Samuelsen, Aren [USA]   49:30
+For nothing but what you're seeing now is better than what I had yesterday. Sarah and I work on it. Last night. This morning, to get it into this form.
+
+Sarah Chilton   49:30
+Nope.
+
+Samuelsen, Aren [USA]   49:36
+So it's definitely improved already.
+
+Sarah Chilton   49:38
+Aaron and I have had a couple hours of conversation on this one.
+
+Blocker, Cheryl (J-Mack)   49:44
+You guys make a wonderful team.
+I think that's good.
+Just thinking back, I know we had.
+There's some. There's some grooming to do, but not that much. Adding the knot, you know, adding version to template.
+I.
+I unless there's some just, you know, some some reason that someone wants to point out that it's a bad idea.
+I do think it would be a good idea to put the.
+The you know the last chunk.
+Of ACS in its own.
+Epic, not initiative.
+Epic so that it can be addressed as a little more, you know, in the way I described before.
+OK.
+
+Samuelsen, Aren [USA]   50:29
+You do so not a big deal.
+
+Blocker, Cheryl (J-Mack)   50:32
+Great. Thank you.
+
+Jeremy Ackerman-Yost   50:34
+Yeah, I mean it also it it interacts between it interacts across two epics as far as I can tell, right.
+So yeah, like definitely split it off would be my recommendation.
+
+Blocker, Cheryl (J-Mack)   50:48
+Welcome back, Jeremy.
+
+Samuelsen, Aren [USA]   50:51
+Happy to have you.
+
+Blocker, Cheryl (J-Mack)   50:52
+Yeah, I hadn't talked to you since you've been back.
+But anyway.
+All right.
+I love it and we didn't even have to go over to DGMT to see how it to explain it, but oh, that's probably to me one of the biggest things here is examples. And you know, the examples don't have to be in notes. They can be in a.
+
+Samuelsen, Aren [USA]   50:59
+Well.
+
+Blocker, Cheryl (J-Mack)   51:12
+Format that is consumed. You know that that Erin and feel free to solicit help from others.
+I think you know to build out examples.
+
+Samuelsen, Aren [USA]   51:18
+Yeah.
+
+Blocker, Cheryl (J-Mack)   51:22
+And step them through it.
+And it might even be that having those examples and stepping them through it before we come into the requirements is an approach.
+But whatever that format is can be attached to this epic as supporting documentation.
+Sarah.
+Well, whomever I'm done.
+
+Sarah Chilton   51:41
+Sorry. Yeah, I did have my hand up, but go ahead and if you want to speak to what she was talking about.
+
+Samuelsen, Aren [USA]   51:45
+Blue.
+I was conceptualizing how to do that with what visual aids I would create to do that without using DGMT to describe logic and make my head hurt a little.
+But please.
+
+Sarah Chilton   52:00
+I I like the idea of some examples in the notes.
+Also I you know, Tim said.
+He may mold this over a little bit more offline and was asking me where he could put thoughts or questions that he had for that.
+Does anyone have any issues with me?
+He said he doesn't with me adding him to the ECML solution chat.
+Where he could maybe drop those, because that's often where we have those sort of discussions.
+I'm not hearing no.
+So if he has feedback, just Aaron, be on the lookout.
+Tim, you can tag Erin in that Channel.
+He's in there as well, so I will get Tim added to that Channel.
+
+Adeyemo, Tim [USA]   52:47
+Awesome. Thank you.
+
+Sarah Chilton   52:47
+In case he has any questions about AC fives, it's just a law as we know all sitting here looking at this, it's a lot to digest and like pick apart on a call.
+So.
+
+Blocker, Cheryl (J-Mack)   53:20
+All right, let's move on.
+
+Samuelsen, Aren [USA]   53:20
+OK.
+Alright, thank you all everybody.
+Appreciate all the input.
+We've got work to do today, but I will tag to whoever's next.
+
+Muniz, John [USA]   53:36
+Morning everyone.
+Are we able to see the capability to view information for a workflow instance?
+
+McCants, Maggie [USA]   53:43
+Gotcha.
+
+Muniz, John [USA]   53:43
+Awesome. Hope everyone's doing well.
+My name's Ryan and I'm a TRA on team carpo.
+Today we will be reviewing 1 initiative and two epics starting with VBMS R 33208 capability to view information for a workflow instance.
+Feel free to interrupt at any time if you guys have questions, concerns or comments.
+With that being said, we can jump right in.
+In support of the Enterprise correspondence management letters ECML solution, users require comprehensive visibility into information for workflow instance and their associated letter instances.
+A workflow instance relies on a unique collection of workflow key parameters that define what content is available for users selection and the lettermanager micro front end mfe. Currently, certain lines of business.
+Access correspondence generating systems independently from a workflow instance.
+This initiative addresses the business need for complete visibility by enabling users to view all letter instances associated with a workflow and comprehensive information describing the current workflow instance within the lettermanager microfont end functionality will support requirements gathering, validation, and design. By providing users with access to all rele.
+Data fields and statuses associated with the workflow instance.
+Including associated letter instances in key metadata.
+Benefit statement by allowing users to view detailed information for each workflow instance in the littermanager mfe. This initiative enhances transparency and traceability for correspondents related activities necessary to manage, track and validate communications throughout the workflow life cycle.
+Below we have our product owners.
+Do we have any questions concerning our initiative?
+I will take silence as a no. Oh, Jeremy.
+
+Jeremy Ackerman-Yost   55:45
+Yeah, like it makes sense to me, but I've been steeping in this terminology for a few months.
+And like I like, I don't.
+We have to introduce the concepts of workflow, instance key parameters.
+The Lettermanager Microfront end and at least two other concepts to the business in the course of this paragraph.
+Potentially. I'm just, you know, like hitting awareness that like maybe we we it might be worthwhile to do a pass of trying to get words that are actually familiar with in here.
+
+Muniz, John [USA]   56:14
+Yes, Sir. OK.
+OK.
+
+Jeremy Ackerman-Yost   56:25
+But I I I that could be hopefully maybe by the time they hit this one, they'll have to have that background.
+I don't know.
+I'm just, I'm trying to put my put myself in the position of a naive member of that list of people at the bottom who hasn't done this before, right and.
+Yeah.
+
+Muniz, John [USA]   56:44
+That, that, that's that's some good feedback. I'll, I'll make note of that.
+Maybe try to go a little bit more high level or expell out some of these terms.
+
+Jeremy Ackerman-Yost   56:54
+Concept. If she's gonna try to do an introductory thing for them first, we'll solve that problem, right?
+So she's gonna talk with her.
+
+Blocker, Cheryl (J-Mack)   57:01
+Yeah. Yeah, that that's where I was going. I mean, yeah.
+And we're still refining that introduction. The ECML overview concepts terms, what they mean presentation.
+It's a hot topic this morning. As a matter of fact.
+But you know, Sarah and I talked about.
+Do we really?
+You know, do we need to say mfe?
+Do we need to talk about microfront end or can we just say lettermanager?
+And that that's something that has been.
+You know, we like talking about the microfront in because we also know that there's this standalone app out there that's going to access microfront end be a differentiator here, you know.
+So I think you know it's just something to consider.
+I I get.
+I I have your same concerns, Jeremy.
+I.
+I I will say while I'm off mute, that last sentence in the summary.
+I read it and read it and read it and it's like functionality.
+Support requirements gathering.
+Validation and design.
+By I didn't get that part.
+
+McCants, Maggie [USA]   58:14
+Yeah, I think we can take that.
+I think we can take out that part too, Cheryl, my ears kind of perked up there too.
+
+Muniz, John [USA]   58:23
+OK.
+
+Blocker, Cheryl (J-Mack)   58:24
+I mean, yeah, if there's something in there that that's worthy, you know, like we have to work through it.
+
+Muniz, John [USA]   58:26
+Thank you.
+
+Blocker, Cheryl (J-Mack)   58:30
+But yeah, OK. Thanks.
+
+Muniz, John [USA]   58:32
+I appreciate it. Thank you guys.
+Any other questions before moving on to our first epic?
+
+Blocker, Cheryl (J-Mack)   58:40
+Yeah, Sarah, Sarah has put it in the chat.
+
+Muniz, John [USA]   58:40
+Are.
+
+Blocker, Cheryl (J-Mack)   58:43
+She'd like to remove mfe.
+
+Muniz, John [USA]   58:45
+OK.
+
+Blocker, Cheryl (J-Mack)   58:46
+I'd I'd I'd like to.
+That's probably something that we're going to come across a lot along a lot of different requirements because it means something to us.
+So we'll we'll definitely consider it, Sarah, but at some point.
+Again, these folks.
+It's not like you can't.
+You know we can't teach them.
+OK.
+You know, OK, I'm gonna hush.
+
+Jeremy Ackerman-Yost   59:19
+OK.
+
+Muniz, John [USA]   59:21
+OK.
+Thank you guys.
+All right, Jacob, I think we're ready to move on to our first epic.
+Awesome. So our first epics VBMSR 33209 ability to view a list of letters in key workflow parameters and lettermanager micro front end. I will keep my I keep my eyes out for how we're going to proceed with the mfe. If we're going to take.
+That out and then I'll make the changes accordingly in this as well.
+Value statement.
+As.
+As a letters manager user, I need the ability to view the lists of letter instances in necessary metadata associated to each workflow instance so that I'm able to effectively manage letters to ensure that the that the appropriate subsequent actions are taken.
+Acceptance criteria.
+AC1 users with appropriate permissions must be able to view the list of letter instances associated to each workflow instance they can access.
+AC2 users are able to view key data fields associated to the letter instance, 2.1 template name, 2.2 template version ID, 2.3 status 2.4 created by 2.5 approved by 2.6 creation date and 2.7 final.
+Date AC 3 users must be able to view the status of a template version.
+Get active, retired and I we have outdated, we, we we left it in red.
+Just want to kinda leave it up for discussion as to whether or not we should include it, keep it, or if that would add some confusion. So that is in red in AC4 is users are presented with a message indicating that the template version for a letter.
+In a review or draft status, outdated or retired.
+And is not the most current published version.
+That's just one of the notifying, like it's basically like a notification.
+Flag. We weren't sure whether to keep that as an AC or have it listed as a note, so we have that there as well.
+
+McCants, Maggie [USA]   1:01:34
+And we realized that outdated is an indicator and not a status.
+So yeah, we just kinda wanted to open that up to the group on I.
+I feel like it's confusing in 3.3 having it there, but also it's.
+Relevant I don't.
+I don't know.
+We we needed to pull the audience.
+
+Jessica Ursulich   1:01:57
+Status is synonymous with state, right?
+So active and retired states for a template version.
+So in that in that case outdated is not really a state or a status.
+And if it's just a message for the user to know, hey, there's a, you know more.
+
+McCants, Maggie [USA]   1:02:21
+There's a newer version, yeah.
+
+Jessica Ursulich   1:02:22
+Yeah, there's a new that's like seems like a UI thing. Yeah. OK.
+
+Sarah Chilton   1:02:26
+Isn't status pending or finalized?
+
+Jessica Ursulich   1:02:30
+For a template version.
+
+Blocker, Cheryl (J-Mack)   1:02:31
+For the template version.
+
+Jeremy Ackerman-Yost   1:02:32
+Of a letter instance, not a template, right?
+
+Sarah Chilton   1:02:35
+Oh, gross.
+
+Jeremy Ackerman-Yost   1:02:35
+Pending or right and and not only pending or finalized, but also there's also the submitted for approval status in the new universe, right?
+
+Sarah Chilton   1:02:36
+I hate all this template stuff and the letters UI.
+
+Jeremy Ackerman-Yost   1:02:44
+It's not as, but all that said.
+
+Blocker, Cheryl (J-Mack)   1:02:45
+OK.
+
+Jeremy Ackerman-Yost   1:02:48
+I I think I agree with every what everybody here has been saying so far.
+It's not a status, but it is important information and I think, Maggie, you you nailed it.
+It's an indicator, so it would just be a new AC that like that describes what it that is.
+
+Muniz, John [USA]   1:02:56
+OK.
+
+Jeremy Ackerman-Yost   1:03:00
+Right, an updated indicator is applied if you made that that letter incense from a template version that is not the latest, right?
+Because the the mfe is always supposed to use the latest version.
+But if you made your letter instance from an old version and now a new version is out, we slap an indicator on it, so they they, you know, have the opportunity to do whatever they can do to mitigate.
+
+McCants, Maggie [USA]   1:03:24
+So I'm wondering, Jeremy, with thank you for saying that.
+I'm wondering if Note 3.
+We should have 3.1 and 3.2 and then our new AC4 should be some version of Note 3.
+
+Jeremy Ackerman-Yost   1:03:42
+Yeah. Yeah. No, I I like that notion that like you separate, obviously retired is one problem and outdated is is just a slightly different one. And and and we we mitigate them in different ways.
+
+Jessica Ursulich   1:03:42
+Is that?
+
+McCants, Maggie [USA]   1:03:59
+Oh, Monica, that made me nervous.
+
+Brescia, Monica [USA]   1:04:01
+I.
+
+Jeremy Ackerman-Yost   1:04:01
+Yeah, that sounded like a sigh.
+And I'm like, oh, God. But I know I'm.
+
+McCants, Maggie [USA]   1:04:04
+I was like, no.
+
+Brescia, Monica [USA]   1:04:05
+I I.
+
+Jeremy Ackerman-Yost   1:04:05
+I've been off a few days.
+I may be off my game, but it was it that bad what I said.
+
+Brescia, Monica [USA]   1:04:09
+No, no. I'm just thinking for like the user outdated. I I I think the concept really is like a newer version is available it it's is more helpful.
+
+Jeremy Ackerman-Yost   1:04:21
+Oh, sure.
+
+Brescia, Monica [USA]   1:04:22
+Than yeah, I'm trying to think of if the purpose is to give a notification. I would think even.
+It's still active.
+It's not that it's not active so.
+If it's active, it's active, you know. But if you wanted.
+
+McCants, Maggie [USA]   1:04:35
+So it has an active an active status with an outdated indicator is that. Is that a true statement?
+
+Brescia, Monica [USA]   1:04:41
+Or with a newer version available, I mean it's 'cause in some situations.
+I'm trying to think of like what kind of flexibility we we want to allow here.
+I.
+
+Jeremy Ackerman-Yost   1:04:59
+The newer whether whether we give them an ability to automatically bump into the newest version or they have to delete it and start over, I actually think that.
+
+Brescia, Monica [USA]   1:04:59
+Just.
+
+Jeremy Ackerman-Yost   1:05:09
+I I personally like outdated.
+I wanted big red thing that tells me, hey, this is bad and you should fix it.
+But we're supposed to be positively framing things.
+So maybe.
+
+Brescia, Monica [USA]   1:05:19
+If it's bad and they don't want them using it, they could retire it.
+The business has the ability to retire that.
+
+Jeremy Ackerman-Yost   1:05:23
+But that doesn't you.
+But retiring it doesn't is not a hard retire. It doesn't get rid of the Ledger instance. The user in the field still has new right.
+
+Brescia, Monica [USA]   1:05:29
+Right. But at least that's indicating it's retired.
+I mean, I don't know what benefit having outdated is. If the business doesn't want them to use it anymore, they could retire it and then it shows up as retired.
+
+Jeremy Ackerman-Yost   1:05:37
+Book.
+That.
+That's why I was heading the same direction you went.
+Newer version available if we're going to send this message, send the newer version is available message because it is positively framed. It doesn't.
+It doesn't.
+
+Brescia, Monica [USA]   1:05:52
+But it's also still active. I think that it it should be you know active.
+
+Jeremy Ackerman-Yost   1:05:54
+Yeah.
+
+Brescia, Monica [USA]   1:05:58
+You know asterisks or something.
+You know what I mean?
+
+Jeremy Ackerman-Yost   1:06:02
+Yeah, yeah, it's still the it's still active status.
+It's just that the the the but it has.
+It's a separate indicator.
+It's not part of AC three at all. Looks like Maggie was saying it would be a new AC4 where we give them a separate indicator that a newer version exists rather than yeah, that if that makes all came to the same spot.
+
+Brescia, Monica [USA]   1:06:13
+Right. OK.
+Yep, with you with you.
+
+McCants, Maggie [USA]   1:06:23
+OK, OK.
+So we'll remove we can.
+
+Samuelsen, Aren [USA]   1:06:24
+And I.
+
+McCants, Maggie [USA]   1:06:26
+Oh, sorry, Erin.
+Were you talking?
+
+Samuelsen, Aren [USA]   1:06:28
+I was gonna add a wrinkle in that.
+It's not necessarily more recent because what if a new version comes out and then the user creates an instance from that new version and then that new version is tired and they go back?
+The old version is not necessarily outdated, it's just not using the correct current version.
+
+Blocker, Cheryl (J-Mack)   1:06:46
+No such thing as an old version.
+You got it. Every new version has to go.
+You can't bring back a new version.
+You might use a new version.
+An old version.
+Create a new version, but you can't back.
+
+Samuelsen, Aren [USA]   1:06:57
+Based on conversation I had with Justin yesterday, Monica, you were part of the conversation. If you retire version 10, what's current is version nine and that would be the active version. But you would have a version 10 instance.
+
+Jeremy Ackerman-Yost   1:07:11
+Oh, that's a minefield.
+Wait a minute. What?
+Retired doesn't affect the entire template.
+It only effects individual statuses, individual template versions.
+
+Brescia, Monica [USA]   1:07:20
+Yeah, and text the you're retiring individual versions only.
+
+Blocker, Cheryl (J-Mack)   1:07:21
+Oh yeah, yeah.
+
+Samuelsen, Aren [USA]   1:07:26
+Yeah.
+
+Blocker, Cheryl (J-Mack)   1:07:26
+OK, I hadn't thought of that scenario.
+
+Jeremy Ackerman-Yost   1:07:27
+OK.
+
+Blocker, Cheryl (J-Mack)   1:07:28
+Why would anybody retire the most active?
+
+Samuelsen, Aren [USA]   1:07:28
+Had that conversation with them.
+Told it, it said.
+
+Brescia, Monica [USA]   1:07:31
+It's the it's it's the most current one is the one that would be available when creating the letter instance.
+This is already the letter instances created.
+
+Jeremy Ackerman-Yost   1:07:41
+So you can only retire something by going back and retiring every existing version.
+
+Brescia, Monica [USA]   1:07:45
+No, no, no, no, no.
+You can retire any of you entire each individual version.
+
+Jeremy Ackerman-Yost   1:07:50
+That's what I'm saying.
+I can't if I if I wanna say the custom 5103 is garbage, we're never gonna send it again in our lives.
+
+Brescia, Monica [USA]   1:07:51
+See.
+
+Jeremy Ackerman-Yost   1:07:56
+I have to go find all 12 versions of it and retire them.
+
+Brescia, Monica [USA]   1:08:01
+Yes, and you can do that in one change though.
+
+Jeremy Ackerman-Yost   1:08:03
+That we're going to shortcut for that.
+Wow, OK.
+
+McCants, Maggie [USA]   1:08:29
+So do we have any thoughts or concerns about?
+This specific epic.
+In relation to this is just that users are able to view, so this is just what they would be looking at.
+So I don't think they would be doing any editing.
+
+Sarah Chilton   1:08:47
+Context. Help. Help me with what they are looking at.
+
+McCants, Maggie [USA]   1:08:49
+Yet.
+
+Sarah Chilton   1:08:51
+Talk to me like I'm 5 here because I haven't looked at this and I look at a lot of them, so I wanna make sure I'm in the right place mentally when I'm looking at this right.
+So I am.
+I guess I was panicking on the chat a little bit on and to Cheryl about like, I'm gonna see all of this on when I think view letters where I'm usually doing that is like when I'm adding a letter. But this would be like representational of.
+The home page.
+
+McCants, Maggie [USA]   1:09:17
+Yes.
+
+Sarah Chilton   1:09:17
+In letters UI where OK where I've already added them and I maybe I come back to work one and I'm back on my home page, right?
+
+McCants, Maggie [USA]   1:09:26
+Yes, yes.
+
+Sarah Chilton   1:09:27
+OK. That makes me feel less terrible.
+
+McCants, Maggie [USA]   1:09:30
+Oh good.
+I'm so glad.
+
+Muniz, John [USA]   1:09:31
+Me too.
+
+Sarah Chilton   1:09:32
+Because that's why I was like, why are 'cause? I had seen a box on UI UX with some of this stuff on it. On the actual edit letter screen, right?
+
+McCants, Maggie [USA]   1:09:43
+Yeah, yeah.
+
+Sarah Chilton   1:09:44
+And it looked like you were marrying that up with template information.
+And the letter instance information.
+And now I am tracking so much better.
+So I know that seems like a stupid question, but I needed to know what I was looking at here because I have seen a different place use some of these things.
+OK.
+That makes sense now.
+More about the status.
+As well, although don't I need to know. You guys said that status was.
+The template version, but on the home page on I also need need to know the status of the letter instance itself.
+Are we covering that somewhere else like weather is pending or finalized?
+
+Brescia, Monica [USA]   1:10:21
+That's yeah, 2/1.
+I mean, I think that's 2/3.
+
+McCants, Maggie [USA]   1:10:26
+Yeah.
+
+Sarah Chilton   1:10:26
+OK.
+That's what I asked.
+That's what I was talking about with that status should be pending or finalized, right?
+And then somebody said no, the status is active or retired, but for 2-3 you're talking about pending or finalized, yeah.
+
+Brescia, Monica [USA]   1:10:36
+It's.
+
+Jeremy Ackerman-Yost   1:10:39
+Yeah.
+
+McCants, Maggie [USA]   1:10:42
+Yeah, 'cause, that's the status of the letter instance. Yeah.
+
+Sarah Chilton   1:10:44
+Yeah, yeah, yeah.
+OK, that now.
+Now I'm tracking everything. I think someone had said.
+
+Jessica Ursulich   1:10:48
+I think, Sarah, when you when you.
+
+Jeremy Ackerman-Yost   1:10:48
+There's another, there's another one there.
+Remember, it's not just pending a finalist anymore.
+There's the submitted whatever is called when we submit it for approval, ready for review.
+
+Brescia, Monica [USA]   1:10:53
+OK.
+
+Sarah Chilton   1:10:55
+Ready for review, isn't it?
+
+Brescia, Monica [USA]   1:10:56
+Ready for review? Yeah.
+
+Sarah Chilton   1:10:57
+Or something ready for review. I've seen. Yeah. OK. This.
+
+Jeremy Ackerman-Yost   1:10:57
+Something like that, yeah.
+
+Brescia, Monica [USA]   1:10:59
+Yeah. Ready for me?
+
+Sarah Chilton   1:11:00
+That's that's how much clearer because you're calling a status here and then in three you're calling.
+You're also calling something a status, but it's different, so we need to. We need to define those, right?
+
+Jessica Ursulich   1:11:10
+OK.
+
+McCants, Maggie [USA]   1:11:12
+So.
+
+Brescia, Monica [USA]   1:11:14
+There is no pending.
+
+Jeremy Ackerman-Yost   1:11:17
+I think it's draft, right?
+
+Sarah Chilton   1:11:17
+OK.
+Well, sorry, I'm speaking in my world now.
+
+Brescia, Monica [USA]   1:11:21
+No, I got you, yeah.
+
+Sarah Chilton   1:11:22
+I thank you for clearing that up because I don't always remember you guys new terms, right?
+But somewhere we need to cover this part of the statuses so.
+
+Jeremy Ackerman-Yost   1:11:31
+There there is a status that we currently call pending and it's what is it draft now, Monica.
+
+McCants, Maggie [USA]   1:11:35
+Yeah, draft.
+
+Brescia, Monica [USA]   1:11:35
+Yes, yes.
+
+Jeremy Ackerman-Yost   1:11:38
+Yeah.
+
+McCants, Maggie [USA]   1:11:38
+OK.
+So does does this help Sarah? So AC2 says.
+
+Sarah Chilton   1:11:39
+OK.
+Yeah, now.
+Well, me understanding where we are also helps.
+Like what?
+What part of the application?
+So my bad.
+
+McCants, Maggie [USA]   1:11:49
+Well, I just wanna make sure so. So with AC2 we have.
+The status of a letter instance and then an AC3. We're talking about the status of a template version.
+
+Brescia, Monica [USA]   1:12:03
+I don't why can't you put that in two? Yeah.
+
+Sarah Chilton   1:12:03
+Yeah.
+
+McCants, Maggie [USA]   1:12:03
+Does that? Is that clear?
+
+Jeremy Ackerman-Yost   1:12:04
+The status of the template version.
+
+Sarah Chilton   1:12:06
+I.
+
+Jeremy Ackerman-Yost   1:12:06
+It's the it's the status of the template version that was used to create the letter instance.
+
+Brescia, Monica [USA]   1:12:10
+Right. I think it's part of the letter instance, yeah.
+
+McCants, Maggie [USA]   1:12:12
+Yeah.
+
+Jeremy Ackerman-Yost   1:12:13
+Right you need.
+You need that layer of indirection so that people get the. You know, we're still relating it back to the list of of letter instances, right?
+
+McCants, Maggie [USA]   1:12:23
+Yeah.
+
+Jeremy Ackerman-Yost   1:12:23
+But it's that's one step removed.
+
+Brescia, Monica [USA]   1:12:26
+Not a key data field associated to the letter instance.
+The template version status of the letter of the template that was used to create it, like you have the template version ID like 22 template name.
+Why not put that status there?
+
+McCants, Maggie [USA]   1:12:44
+And then.
+
+Brescia, Monica [USA]   1:12:45
+Or at the end I mean maybe put it in a different order.
+
+McCants, Maggie [USA]   1:12:47
+For.
+
+Brescia, Monica [USA]   1:12:47
+I don't.
+I don't know.
+
+Jessica Ursulich   1:12:53
+Yeah, I was thinking #3 was more. I want to create a new letter, so I need to see what status that template version is that I can create a new letter from.
+
+Brescia, Monica [USA]   1:13:06
+But these are already created.
+These are letter instances we're looking at.
+
+Jessica Ursulich   1:13:11
+OK.
+So this this is only letter instances we're looking at.
+
+Brescia, Monica [USA]   1:13:16
+Yeah, this is an viewing a list of letter instances.
+
+Jessica Ursulich   1:13:21
+Can effectively manipulate. You're absolutely right.
+
+Sarah Chilton   1:13:28
+You have has uriux looked at this yet?
+
+McCants, Maggie [USA]   1:13:32
+No.
+
+Sarah Chilton   1:13:32
+Just from a like a user perspective, OK.
+I'm just curious because I'm like man, this is a lot of stuff that.
+Our end users, you know, could potentially need to know, obviously, but don't care about, right?
+
+McCants, Maggie [USA]   1:13:45
+Yeah.
+
+Sarah Chilton   1:13:45
+Like template version ID like things like that.
+
+Jeremy Ackerman-Yost   1:13:46
+Right.
+
+Sarah Chilton   1:13:49
+So I was just thinking.
+I'm just thinking out loud.
+I haven't seen this and I was left off the invite for some of the calls and I wanted to know if you guys had seen it yet or not.
+And like, is this expandable and like were hidden or like you know what I mean for some of these things.
+
+Jessica Ursulich   1:14:04
+Yeah, I was. I was wondering.
+
+McCants, Maggie [USA]   1:14:04
+That's that's what I was kind of thinking is like collapsed, but.
+
+Sarah Chilton   1:14:08
+Yeah, like I could look at it if I need to, but please don't put it in my face because I can't care.
+
+McCants, Maggie [USA]   1:14:13
+Yeah, yeah, yeah.
+
+Back, Lauren [USA]   1:14:16
+Yeah, would. Would you guys like this as an item for UI US to prepare? Hi.
+
+Sarah Chilton   1:14:19
+Oh, hey, Lauren.
+
+McCants, Maggie [USA]   1:14:21
+Yes, Lauren, you were on my list today.
+This is the one I was talking about yesterday in our meeting.
+
+Back, Lauren [USA]   1:14:27
+Oh, gotcha. OK.
+Yeah, I can let me.
+I can forward this over to the designers working on template manager. Sarah and Tori should be both on this soon and we can try to prepare a visual for this for our next meeting.
+
+McCants, Maggie [USA]   1:14:49
+Lauren, you're a hero.
+
+Blocker, Cheryl (J-Mack)   1:14:50
+This isn't this isn't template.
+
+Back, Lauren [USA]   1:14:51
+YouTube.
+
+Muniz, John [USA]   1:14:51
+Thank you.
+
+Sarah Chilton   1:14:51
+This is lettermanager yeah.
+
+McCants, Maggie [USA]   1:14:53
+Yeah.
+
+Back, Lauren [USA]   1:14:54
+Oh, this is letter, OK.
+Yeah. Then I can do this.
+I'll review this now.
+
+Sarah Chilton   1:14:59
+Yeah, this is like viewing the list of letters on the home page and letters UI, right?
+
+Back, Lauren [USA]   1:15:03
+OK. Gotcha.
+
+Sarah Chilton   1:15:04
+Yeah. Listen, I was offered to where we were too.
+
+Back, Lauren [USA]   1:15:04
+Sorry, I just saw template and I was like.
+
+Sarah Chilton   1:15:08
+So.
+
+Jeremy Ackerman-Yost   1:15:09
+Like like the template, the template information doesn't matter 95% of the time, but the 5% of the time it matters.
+
+Back, Lauren [USA]   1:15:09
+OK.
+
+Jeremy Ackerman-Yost   1:15:17
+It matters a lot, right?
+
+Sarah Chilton   1:15:18
+Yeah.
+
+Back, Lauren [USA]   1:15:18
+OK.
+
+McCants, Maggie [USA]   1:15:19
+Yeah.
+
+Jeremy Ackerman-Yost   1:15:20
+You know, it's one of those problems. Sorry, go ahead.
+
+Sarah Chilton   1:15:20
+And so it's weird. 'cause. Yeah, it's weird. 'cause. We're calling out template stuff here.
+So if you're just glancing at it, then yeah, it's like what application am I in?
+But yeah, it does it.
+It matters when it you're right when it matters. Otherwise I can't.
+
+Back, Lauren [USA]   1:15:35
+Thank you.
+
+Sarah Chilton   1:15:35
+I don't care or look at it like to my knowledge, a lot of these users don't even preview their letter before they finalize it.
+
+Jeremy Ackerman-Yost   1:15:43
+Right.
+
+Sarah Chilton   1:15:43
+You know what I mean?
+So it's like we need to have some sort of way to not show them this or.
+Hide it or something.
+Thing.
+
+Jeremy Ackerman-Yost   1:15:50
+Well, the average field user is going to. If you put this front and center, all you're doing is turning them to scan past that section of the page, right?
+Because it doesn't.
+
+Sarah Chilton   1:15:58
+Yes.
+
+Jeremy Ackerman-Yost   1:15:59
+It's completely irrelevant to them, so it probably should only forward itself when it matters and when it matters, is hey, we retired this thing or oh, there's a newer version of this thing.
+That you might want to switch to, right?
+Like it's that but, but the rest of the time, it's like, yeah, no template version is so far away from a field users caring.
+
+Sarah Chilton   1:16:21
+Well, even created by approved by.
+
+Jeremy Ackerman-Yost   1:16:21
+Right.
+
+Sarah Chilton   1:16:25
+A lot of these things, right?
+Like I definitely want to know if my letter is in draft or finalized and what the name of it is.
+
+Jeremy Ackerman-Yost   1:16:34
+Now, if there's an approval cycle right now, our current users don't have an approval cycle, but if there is an approval cycle, you probably do need approved by right. You need to know. Oh yeah, right.
+
+Sarah Chilton   1:16:34
+But like.
+No, no, we need it there.
+
+Jeremy Ackerman-Yost   1:16:45
+But yeah.
+
+McCants, Maggie [USA]   1:16:49
+Yeah, we can hide it a little bit.
+
+Sarah Chilton   1:16:50
+My screen, yeah.
+
+Back, Lauren [USA]   1:16:54
+OK.
+
+Sarah Chilton   1:16:54
+Hi. Anyway, I just we're getting too far into the UI UX thing probably but.
+
+Back, Lauren [USA]   1:17:01
+Just to make sure then the template specific items that the user might want to see but won't be like in their face would be the name, version ID, version status and then those two statuses active and retired.
+It's it would be one of those two and that's it.
+
+Jeremy Ackerman-Yost   1:17:17
+Well, the template name is also the letter name. So. So yeah. Name is different name, yeah.
+
+Back, Lauren [USA]   1:17:20
+OK.
+
+Sarah Chilton   1:17:21
+We need.
+
+Back, Lauren [USA]   1:17:26
+So the name is not necessary.
+
+Sarah Chilton   1:17:26
+And like we, we might wanna have an option where we're not necessarily shown, you know, on the screen at all times.
+Created by approved by like like I should be able to expand that or something like right?
+I I don't necessarily need to know that all the time. I need to know that my letter was finalized and what state it's in, right?
+
+Back, Lauren [USA]   1:17:44
+Yeah.
+
+Sarah Chilton   1:17:48
+And the name.
+
+Back, Lauren [USA]   1:17:51
+Gotcha. OK.
+Yeah, we have.
+We have kind of expandable sidebars that I'll I'll show during the next meeting, Sarah, so you can review that and we can see if that's a good solution.
+
+Sarah Chilton   1:17:59
+Yeah, I saw that in the. I saw that one that you did for the individual letter instance, like the edit letter screen.
+
+Back, Lauren [USA]   1:18:06
+Yes.
+Uh-h.
+
+Sarah Chilton   1:18:08
+And then I just.
+I hadn't seen anything for this yet.
+Obviously you haven't worked on it, but.
+
+Back, Lauren [USA]   1:18:13
+Right.
+
+Sarah Chilton   1:18:14
+OK.
+Well, I liked what I saw for the other one and how you guys organized that. So to kind of take away from the user what they necessarily don't see all the time.
+
+Back, Lauren [USA]   1:18:15
+Yeah, I can prepare that.
+
+Jeremy Ackerman-Yost   1:18:17
+Yeah.
+
+Back, Lauren [USA]   1:18:18
+Yeah, for sure.
+Got you.
+OK.
+Yeah, I'll keep this in mind. Thank you.
+
+Jeremy Ackerman-Yost   1:18:25
+I'm going to say one like devil's advocate thing real quick and then I'll shut up in the for like our current users in like VMS core.
+Yeah, created by and approved by.
+There is no approved by workflow.
+Created by is always the person who works to claim.
+But there are other lines of business who are going to kick work items back and forth between people more often, at which point created by and approved by actually become a more front and center and important concept depending on the workflow.
+So that this thing is embedded in.
+So I would I would hesitate to bury that one as much, even though.
+Our our first front of mind.
+Users are of course like VBS core users that that that they may not be in any way.
+What about typical users of this system overall? Once it goes out across the whole EDA?
+So that, that's all that. That makes things more complicated.
+Sorry, but yeah.
+
+McCants, Maggie [USA]   1:19:28
+This was super helpful for us, like talking through it.
+
+Muniz, John [USA]   1:19:30
+Yeah. Thank you guys so much.
+
+Jessica Ursulich   1:19:33
+I had one thought I had was the the epic is titled View list of letters and key workflow parameters.
+Do we have anything in here for viewing key workflow parameters or?
+
+McCants, Maggie [USA]   1:19:51
+So that is in our next epic.
+Under this initiative.
+
+Jessica Ursulich   1:19:55
+OK.
+
+McCants, Maggie [USA]   1:19:56
+But if you think that changing the title would be beneficial, we're all for it.
+
+Jessica Ursulich   1:20:05
+Yeah.
+
+McCants, Maggie [USA]   1:20:05
+Whatever the clearest, the most easiest, yeah.
+
+Brescia, Monica [USA]   1:20:05
+I agree, yeah.
+
+Jessica Ursulich   1:20:08
+OK.
+
+Brescia, Monica [USA]   1:20:08
+I agree.
+
+McCants, Maggie [USA]   1:20:11
+So you think that we should just call this one like ability to view a list of letter letters?
+
+Jessica Ursulich   1:20:15
+Yeah, definitely.
+
+McCants, Maggie [USA]   1:20:17
+In lettermanager OK.
+
+Jessica Ursulich   1:20:19
+And then the other thing I know we struck through #3.
+Do you guys have that covered somewhere?
+'Cause, I realize it's just viewing.
+
+McCants, Maggie [USA]   1:20:29
+So.
+So what we were gonna do with #3 is basically replace it.
+
+Jessica Ursulich   1:20:34
+I'm sorry.
+I apologize.
+
+McCants, Maggie [USA]   1:20:35
+No, no, don't, don't.
+We were going to replace AC3 with Note 3.
+And put that they're presented with a message and then we will move to two dot outdated to that new AC2. So it. So we'll say it's an indicator and not a status.
+
+Jessica Ursulich   1:20:56
+OK. Gotcha. So two and three will be moved or wait.
+Three will be added as a no, but two because two is about viewing the template versions to create a letter instance. Is that gonna be in a separate?
+
+McCants, Maggie [USA]   1:21:15
+Oh, you you think?
+AC.
+We should redo AC too.
+That users are able to view.
+
+Jessica Ursulich   1:21:25
+So I was originally when I had read #2. I was thinking that.
+
+McCants, Maggie [USA]   1:21:25
+Template version.
+
+Jessica Ursulich   1:21:32
+That was a user coming in to create a new letter instance, right?
+And then they would be able to see those the status of those template versions, right?
+And you guys were like, no, no, this is just.
+
+McCants, Maggie [USA]   1:21:46
+Mm-hmm.
+
+Jessica Ursulich   1:21:50
+Viewing letter instances that have been created. So I'm just wondering.
+Is there another epic that captures the actual like creation of a new letter instance? Does that?
+
+Blocker, Cheryl (J-Mack)   1:22:04
+Absolutely, absolutely.
+
+McCants, Maggie [USA]   1:22:05
+Yeah. Yes, yeah, we have that too.
+
+Jessica Ursulich   1:22:07
+OK, cool.
+
+McCants, Maggie [USA]   1:22:09
+And that that's actually where same team is working on that and will be presenting those to you guys hopefully.
+Next early next week.
+
+Jessica Ursulich   1:22:18
+All right. All right. Thank you.
+
+McCants, Maggie [USA]   1:22:20
+Yeah. Thank you.
+
+Muniz, John [USA]   1:22:21
+Thank you.
+Alright. Any other questions or comments?
+Thank you guys again for all the feedback.
+
+McCants, Maggie [USA]   1:22:34
+OK.
+So we have.
+We have one more epic for this and we have 5 minutes.
+
+Blocker, Cheryl (J-Mack)   1:22:40
+And I would love feedback.
+
+McCants, Maggie [USA]   1:22:41
+OK.
+
+Muniz, John [USA]   1:22:42
+Awesome.
+Well, thank you all for your time.
+I'm gonna hand it over to Christine to go over this last epic. Thank you.
+
+Henninger, Christine [USA]   1:22:55
+Hi everyone.
+I'm Christine huntinger.
+I'm also a TRA on team carpo.
+I am gonna go over VBMSR 33226.
+Ability to view key parameter values that describes the workflow instance and letter manager micro front end. I do wanna note that I know we had that conversation regarding the verbiage for microfront and so we will keep continuity with this epic as well.
+If the decision comes that that needs to be changed.
+OK.
+Please feel free to interrupt me if there is anything I do tend to talk fast, especially as I know we are on a time crunch so our value statement for this epic is as a letters manager user. I need the ability to view key parameter values that descri.
+The workflow instance that I'm currently in.
+So that I can identify the workflow instance I am currently in.
+Our acceptance criteria.
+AC1 users must have the ability to view the following information that describes the workflow.
+Instance AC 1.1 will be current workflow instance name.
+And 1.2 is our key parameter value.
+Anything there?
+OK.
+For our notes, we have the definition of our workflow instance.
+For note 1, the workflow instance is a unique collection of workflow key parameters that define what content is available of a user selection in the letter manager Mfe.
+Note 2 examples of our key parameter values 2.1 is our workflow as VBMS in two dot 1.1 is our key parameter value.
+Claim ID.
+Factor in ID workflow, instance name, lob name, application name and associated templates.
+Cheryl, I see your note there.
+We will rework that as well.
+
+Blocker, Cheryl (J-Mack)   1:25:08
+Yeah, when you were reading it, I was like, OK, currently, yeah, so.
+So I just wanted to while I'm off mute, Sarah and whoever else is out there, I mean, to me, one of the biggest.
+New new pains in.
+The letter UI when you go to that letters UI if you like.
+Open up multiple instances of the letters UI. You don't know where you are because it doesn't tell you.
+Well, what veteran am I in?
+What climb am I in? What?
+You know what I'm saying?
+This is trying to address that problem.
+And I want to know if that hits the mark or if there's other information that you think should be on.
+The letter manager page that explains where am I.
+Who am I?
+
+McCants, Maggie [USA]   1:26:01
+Who am I?
+
+Sarah Chilton   1:26:01
+I have to.
+I have to think about that.
+You know, I'd like to.
+I like to mold these over a little bit on my own. Like I said, usually try to do that before didn't get the opportunity. Do have a question.
+So I'll look into that and think about that, Cheryl. But I do have a question about.
+The example of key parameter values in the notes so.
+When you're on the letter manager home page and I'm looking at stuff, I'm gonna be able to see.
+All of the templates from there.
+Like usually I go to add you know, add new letter and that's where I can see all of the templates that are available to me, right?
+We're gonna have the a template list somewhere else as well.
+
+Blocker, Cheryl (J-Mack)   1:26:50
+Where are you seeing that?
+
+Sarah Chilton   1:26:52
+Associated templates at the end of key parameter values.
+
+Blocker, Cheryl (J-Mack)   1:26:56
+Oh MMM, yeah. MMM.
+
+Sarah Chilton   1:26:59
+I think we got to kill that, right?
+
+Blocker, Cheryl (J-Mack)   1:27:00
+What do you think?
+
+Sarah Chilton   1:27:02
+That seems redundant.
+I don't know to have that there 'cause. We're gonna 'cause. You can do that when you go to. You know when you're in your in the letter manager and you go to select your letter instance, right.
+
+McCants, Maggie [USA]   1:27:03
+Yeah.
+Yeah.
+
+Sarah Chilton   1:27:14
+That you're trying to create. I just don't think I need to see another list of the templates somewhere else.
+But.
+
+Brescia, Monica [USA]   1:27:23
+I also don't think it's a key parameter value.
+
+McCants, Maggie [USA]   1:27:29
+I don't either. Now that we're talking about it out loud.
+
+Brescia, Monica [USA]   1:27:34
+And also the workflow instance name is already.
+Listed out above 11.
+So either it's 112.
+
+McCants, Maggie [USA]   1:27:47
+Yeah, I think.
+I think we were just trying to, like, provide an example in the notes, but if that's confusing, we don't even have to include that.
+
+Blocker, Cheryl (J-Mack)   1:27:59
+I think the no. OK, so let's let's hold on here. Yeah.
+
+Brescia, Monica [USA]   1:28:05
+And those are types, not I mean.
+
+Blocker, Cheryl (J-Mack)   1:28:08
+Yeah, these.
+Are.
+Blah blah blah blah.
+Yeah. As we're looking at this really a workflow.
+Has.
+In order to in order to start the letter manager, you need to know what the line of business is, what the application is, and what the workflow is.
+And then for the workflow there are the key parameters.
+I think in in I know I I'm a contributor to this confusion.
+I think maybe up in the acceptance criteria under one like you know we should all, we should have the line of business name and the application name.
+
+McCants, Maggie [USA]   1:28:58
+OK.
+
+Blocker, Cheryl (J-Mack)   1:28:59
+Up there, does that make sense more and then and and the workflow name and then what are the the key parameter values that got us into that workflow?
+
+McCants, Maggie [USA]   1:29:01
+Yes.
+
+Blocker, Cheryl (J-Mack)   1:29:11
+Yeah.
+OK, I think.
+
+McCants, Maggie [USA]   1:29:14
+OK, this this helps me way way more.
+
+Blocker, Cheryl (J-Mack)   1:29:19
+But he's still having an example of what, what, what key parameter types are there really in in the real life?
+Well, claim ID and veteran ID are certainly two of them.
+
+McCants, Maggie [USA]   1:29:33
+And it should be types and not values, correct?
+Key parameter types.
+
+Blocker, Cheryl (J-Mack)   1:29:41
+Were you talking about and I think you mean like an acceptance 1.4?
+
+McCants, Maggie [USA]   1:29:47
+Yeah.
+
+Blocker, Cheryl (J-Mack)   1:29:48
+I think it should be the key perimeter type and the supported value was and the and the value that was provided for it.
+
+Samuelsen, Aren [USA]   1:29:52
+Value.
+
+McCants, Maggie [USA]   1:29:53
+Oh.
+
+Blocker, Cheryl (J-Mack)   1:29:57
+It would be both.
+I mean just putting 12345678.
+
+McCants, Maggie [USA]   1:29:58
+So key parameter type and then key parameter value.
+
+Blocker, Cheryl (J-Mack)   1:30:02
+Yeah, just putting one.
+
+McCants, Maggie [USA]   1:30:03
+OK.
+
+Blocker, Cheryl (J-Mack)   1:30:03
+234578 without saying oh, this is a claim ID or oh, this is a veteran ID.
+We need both the type and value.
+
+McCants, Maggie [USA]   1:30:10
+OK.
+So Jacob, on 1.4 you can just put key parameter type and then make a #5.
+It says key parameter value.
+OK.
+How's that look, guys? Better.
+
+Henninger, Christine [USA]   1:30:34
+Yeah.
+I think that makes a lot of sense.
+
+McCants, Maggie [USA]   1:30:45
+OK.
+I think that's all we have and we're only three minutes over and we got through a lot.
+
+Jessica Ursulich   1:30:54
+No, sorry. One small little minor thing.
+
+Blocker, Cheryl (J-Mack)   1:30:54
+Guys.
+
+Jessica Ursulich   1:30:58
+The letter manager user, I think it probably makes more sense to say you know, letter finalizer letter editor.
+'Cause it you know.
+
+Muniz, John [USA]   1:31:10
+I yeah, I I initially kept it as just letters manager user 'cause. I assume that the finalizer and the editor would need to be able to view the list of letters, but I can that that was my fault.
+
+Blocker, Cheryl (J-Mack)   1:31:11
+Here's the.
+
+Muniz, John [USA]   1:31:25
+I I can make that change.
+
+Blocker, Cheryl (J-Mack)   1:31:27
+Right now not.
+Not your fault, I think.
+I think it's worth a very short discussion.
+Yeah, Jeremy, say the PDD will provide specific roles and I and we're gonna have more user roles than just the quote, the actors and the solutions document.
+
+McCants, Maggie [USA]   1:31:34
+Yeah.
+
+Blocker, Cheryl (J-Mack)   1:31:42
+I would what?
+What about as a user of the letter manager?
+And not be exploited because we're going to have.
+
+McCants, Maggie [USA]   1:31:47
+I like that.
+
+Brescia, Monica [USA]   1:31:48
+Yes.
+
+McCants, Maggie [USA]   1:31:49
+As a user.
+
+Brescia, Monica [USA]   1:31:49
+Yes.
+
+Blocker, Cheryl (J-Mack)   1:31:52
+We're going to have you only folks, we're going to have people that can get in there that, yeah, it's going to be more active than just the two.
+
+Jessica Ursulich   1:31:57
+All right. OK.
+Thank you.
+
+Muniz, John [USA]   1:32:01
+Thank you. And should we, should we make those changes for the other ones as well?
+
+McCants, Maggie [USA]   1:32:02
+Yeah. Thank you.
+
+Blocker, Cheryl (J-Mack)   1:32:02
+Good, good everybody.
+
+McCants, Maggie [USA]   1:32:07
+Yeah. Well, we can change it here too.
+
+Muniz, John [USA]   1:32:08
+OK.
+
+McCants, Maggie [USA]   1:32:14
+Yeah, just to say consistent and then we can also look at the initiative to see if.
+We need to update that too, but we can do that offline.
+OK.
+Unless anyone has anything else, I think that we can let y'all go.
+We really appreciate you hanging in there with us and talking through it.
+
+Jessica Ursulich   1:32:37
+Thanks everybody.
+Great job.
+
+Blocker, Cheryl (J-Mack)   1:32:37
+Very, very productive meeting, very productive meeting this today.
+
+Muniz, John [USA]   1:32:38
+Thank you so much.
+
+Blocker, Cheryl (J-Mack)   1:32:41
+Thank you guys.
+
+McCants, Maggie [USA]   1:32:43
+Thanks y'all.
+
+Lawrence, Kelsey [USA] stopped transcription
