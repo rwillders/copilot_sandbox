@@ -1,67 +1,98 @@
-Initiative Name: Capability to Manage Option Selection Group Inputs and Placeholders within Templates
+Initiative Name: Capability to Update Name and other Attributes on a Template
 
 Epic Names:
-1. Ability to Manage Option Selection Group Inputs and Their Placeholders Within a Template
+1. Ability to Update Name and other Attributes on a Template
 
-TEMPLATES_003110: User Manages Option Selection Group Inputs and their Placeholders, using Manually Provided Options, within a Template
-Use Case ID: TEMPLATES_003110
+TEMPLATES_002100 User Updates Name on a Template
+Use Case ID: TEMPLATES_002100
 
-Description: While building out a Template in the Template Manager, the Changeset Editor has the ability to create, modify, and retire Templates. One of the input values that can be available for the Changeset Editor to create and utilize in a Template is the Option Selection Group. This input group allows the Changeset Editor to create groups of manually provided option values for the Letter Editor to select from, that may include additional subfields. These groups can be made optional, multiselect, or both. This input group allows the Letter Editor the ability to select from multiple predefined values, designed by the Changeset Editor, while building out a Letter Instance.
+Description: This use case describes the ability of a user to modify the name associated with a Template that is in a Changeset within the ECM-L system. This functionality allows users to maintain clarity and organization among various templates, ensuring they are easily distinguishable. Updating the name might be necessary for various reasons, such as correcting typos, improving clarity, or reflecting changes in the Template's purpose.
 
-Line(s) of Business: All Lines of Business 
+Line(s) of Business: All Lines of Business
 
 Primary Actor(s): Changeset Editor
 
-Goal: The goal of the Changeset Editor is to configure Option Selection Groups so that the Letter Editor has the ability to select from a group of predefined options in order to accurately reflect the information needed specifically for the Letter Instance they are working in.
+Goal: The user needs to be able to update the name of an existing Template that is in a Changeset in the ‘Draft’ status, so that the Template names are easily identifiable, clear, and reflect the Template's purpose. 
+Secondary Actor: N/A
+
+List of Abilities:
+
+Users who edit the Template are able to:
+
+Provide a value that will update the Name property when the Template is published
+Preconditions:
+
+The user is logged into the system and has the necessary permissions to access and modify the Template that is in a ‘Draft’ status.
+Post Conditions:
+
+The specified Template's name is updated on that Template to the new value provided by the user.
+The updated name is reflected in all relevant areas of the draft copy.
+Main Flow/Use Case:
+
+The user navigates to the Template manager and selects a Template that is in a 'Draft’ status.
+
+The system displays the editable properties of the template, including the current name.
+
+The user modifies the content of the Name field with the new desired name for the template.
+
+The system then updates and saves the name of the Template with the new name within the draft copy of the Changeset.
+
+Notes:
+
+The Name property is saved immediately when modified, even while the Changeset is in ‘Draft’ status. The updated name is reflected in the draft copy of the Template within the Changeset.
+Is there a list of validations for creating and editing the name of a template? Yes, all of the items below will be addressed during requirements documentation.
+Such as:
+Exceeds character limits
+Contains invalid characters
+Is a duplicate of an existing name
+Should an error message be displayed if these validations are in place?
+
+TEMPLATES_002150 User Manages Template Attributes
+Use Case ID: TEMPLATES_002150
+
+Description: For creating Templates in the Template Manager, there are two kinds of Templates to choose from: Fragment Templates and Full Templates. Fragment Templates are Templates that represent a piece of content that can be included inside of another Template. A Full Template is a Template that represents the full content of a piece of correspondence, possibly including Fragment Templates. Unlike Full Templates, Fragment Templates cannot become a Letter Instance on their own. Attributes are a set of configuration details and content needed to manage a particular type of correspondence. The purpose of this Use Case is for the user to have the ability to manage the attributes aligned to each Template.
+
+Line(s) of Business: All Lines of Business
+
+Primary Actor(s): Changeset Editor
+
+The goal of the Changeset Editor is to assign and manage the respective attributes when creating Templates in the Template Manager so that the Template information is clear, accurate, and identifiable.
 Secondary Actor: N/A
 
 List of Abilities:
 
 The Changeset Editor is able to:
 
-Create an Option Selection Group:
-Configure the Option Selection Group:
-Provide Option Selection Group with a Name.
-Identify if the Option Selection Group is Optional.
-Identify if the Option Selection Group is Multiselect.
-Manually provide Option Group Values as choice(s) under the Option Selection Group; can be zero-to-many.
-Provide each Option Group Value with a Name; the Name will be the title of the Option Group Value and will be what the Letter Editor see’s when selecting options in the Option Selection.
-Add additional Subfield(s) to each Option Group Value as nested inputs that will only be exposed if the Option Group Value the subfields are tied to is selected.
-Provide each Subfield with a Name, Data Type, and any additional configuration settings determined by that Data Type.
-This subfield can be of any Data Type that ECM-L supports.
-Add Option Selection Group Placeholder(s) as Conditional Block(s) or Inline Conditional(s) into a specified location in the Content of the Template.
-Configure the Inline or Block Conditional Placeholder to evaluate each Option Group Value:
-Each Option Group Value within the Option Selection Group is available as a Boolean value that is able to be evaluated in any Conditional Content rules. 
-Configure the content portion of an Option Selection Group Placeholder.
-The user will populate the content of an Option Selection Group Placeholder.
-This content can be of any type of content that ECM-L supports.
-Update the configuration of an Option Selection Group Placeholder in the Content of a Template.
-Remove an Option Selection Group Placeholder from the Content of a Template.
-Preconditions
+Assign the Template Attribute Template Type at the creation of the Template.
+View the Template Attributes Name, Template Type, Description, and Labels for any Template in ‘Draft’ status aligned to the Line of Business they are working under.
+Update the Template Attribute Types Name, Description, and Labels for any Template in a Changeset aligned to the Line of Business they are working under.
+Preconditions:
 
-The user is working in a Template that is in ‘Draft’ status.
-Post Conditions
+The Application(s) for which the user intends to manage Template Attributes must exist.
+Post Conditions:
 
-The Option Selection Group Input Placeholder(s) have been configured and updated in the Template.
-Main Flow:
+The Template Attributes are accurate, and the Template is no longer in ‘Draft’ status.
+Main Flow/Use Case:
 
-The user selects an Option Selection Group as a new Input field on the Template.
-The user configures the Option Selection Group:
-User provides the Option Selection Group with a Name.
-User identifies if the Option Selection Group is Optional.
-User identifies if the Option Selection Group is Multiselect.
-User manually provides one or more Option Group Value(s) as option(s) for the user to select from.
-User provides each Option Group Value with a Name.
-User adds additional Subfield(s) to an Option Group Value:
-User provides each Subfield with a Name, Data Type, and any additional configuration settings determined by that Data Type.
-The user configures an Option Selection Group Placeholder via Conditional Block or Inline Conditional for each Option Group Value in the Option Selection Group.
-The user inserts each Placeholder into a specified location in the Content of the Template.
-The user populates the content of each Option Selection Group Placeholder.
-The user can update the configuration of the Option Selection Group Placeholder in the Content of the Template.
-If needed, the user can remove an Option Selection Group Placeholder from the Content of a Template.
-The user can continue making updates and adding/removing Option Selection Group Placeholders into the Content of a Template while it is in ‘Draft’ status.
-
+When the Template is in a Changeset:
+The user can view the following Template Attributes:
+Name
+Template Type
+Description
+Labels
+The user can update the following Template Attributes:
+Name
+Description
+Labels
+When the Template is outside a Changeset:
+The user can view the following Template Attributes:
+Name
+Template Type
+Description
+Labels
+The user can update the following Template Attributes:
+Labels
 Notes:
 
-Option Selection Group Scenario:
-The user is able to select one or more options of information needed from a Veteran. Within each option selected, the user is required to enter the corresponding subfields, if there are any.
+The Template Type attribute has two possible values: Full or Fragment. This is something that is identified at the creation of the Template and cannot be changed after creation.
+This use case is set at the Template level, not at the Template Version level.
