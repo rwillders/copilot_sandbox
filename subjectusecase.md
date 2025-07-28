@@ -1,72 +1,33 @@
-Initiative Name: Capability to Add and Manage Template Content and Input Placeholders in Template Versions 
+Initiative Name: Capability to Style and Set Fonts within the Content of a Template Version 
 
 Epic Names:
-1. Ability to Add Text Content to a Template Version
+1. Ability to Style and Set Fonts within the Content of a Template Version
 
-TEMPLATES_003100: User Manages Rich Text and Input Placeholders in the Content of a Template
-Use Case ID: TEMPLATES_003100
-Description: The content of a Letter Template is comprised of rich text and Input Placeholders. By managing this content, Letter Instances are tailored to the Line of Business’ needs, ensuring recipients receive accurate correspondence.
-Line(s) of Business: All Lines of Business
-Primary Actor(s): Changeset Editor
-Goal: Users who manage Templates must ensure Templates under their Line of Business are current.
-Secondary Actor: N/A
-Preconditions:
-A Template within the corresponding ‘Draft’ Changeset has been selected.
-Post Conditions:
-N/A. Users will always be able to manage the content of a Template if the Changeset is in the status of ‘Draft’.
+TEMPLATES_003450 User Manages the Style of Content within a template
+Description: For content of a template, users are able to specify the style of content to be applied to the rendered PDF of a Letter Instance. Styling the content of a letter can be done multiple ways and is useful for ensuring clarity, readability, and consistency when creating letters.
+Line(s) of Business: All Lines of Businesses
+Primary Actor(s):
+Changeset Editor
+1.	Goal: The user needs the ability to specify the style of content in the rendered PDF of a Letter Instance. 
 List of Abilities:
-Users who manage Templates are able to:
-Manage Rich Text
-Add rich text within the content of a Template.
-Add the location of the rich text within the content of a Template.
-Update the location of the rich text within the content of a Template.
-Format the rich text as it should appear within the content of a Template.
-Update rich text within the content of a Template
-Remove rich text within the content of a Template
-Manage Input Placeholders
-Add Input Placeholders, from a list of available Inputs within the content of a Template.
-Apply Rich Text to Input Placeholder.
-Add the location of the Input Placeholders in the content of a Template.
-Update the location of the Input Placeholders in the content of a Template.
-Remove Input Placeholders within the content of a Template.
-Preconditions
-A Template within the corresponding 'Draft' Changeset has been selected.
-Post Conditions
-N/A: Users will always be able to manage the content of a Template if the Changeset is in the status of 'Draft'.
-Main Flow:
-User is able to utilize any of the main flow segments listed below at any time in the Template editing process and in no particular order.
-User who manages rich text in a Template:
-Accesses the Template within its Label
-Accesses the content of the Template
-Adds the location of the rich text within the content of the Template
-Updates the location of the rich text within the content of the Template
-Adds rich text within the content of a Template
-Updates rich text within the content of a Template  
-Formats the rich text as it should appear in the content of a Template
-Removes rich text within the content of a Template
-User who manages input fields that can be applied to a letter instance by the field user (Input Placeholders) in a Template:
-Accesses the Template within the Label
-Accesses the content of the Template
-Apply Rich Text to the Input Placeholder
-Adds the location of the Input Placeholder within the content of a Template
-Updates the location of the Input Placeholder within the content of a Template
-Identifies the Input Field for the placeholder
-Removes Input Placeholders within the content of a Template
+Changeset editors are able to:
+1.	Define the style of the following content in a ‘Draft’ template:
+a.	Static Text
+b.	Input Placeholders
+c.	Data Resource Field Placeholders
+d.	Calculation Result Placeholders
+2.	Define the paragraph heading style of the content.
+3.	Define the font size of the content.
+4.	Define the font type of the content from a list of pre-defined fonts.
+5.	Define the style of text of the content (Bold, Italicize, Underline). 
+Preconditions:
+1.	There is a Template to be edited in ‘Draft’ Status. 
+Postconditions: 
+1.	The style in a Template will be reflected in the rendered Letter Instance. 
+Main Flow: Set the Settings, Present Content
+1.	The user provides the settings for the style of the content to be added to the template.
+2.	The user provides content that uses the provided style settings. 
+Alternate Flow: Present Content, Set the Settings 
+1.	The user selects existing content and updates the style setting for that content. 
 Notes:
-Input Placeholders can be used to allow the user to provide data to be put directly into the content of the given letter, allow them to make choices between provided values, or input data for calculations necessary to create the Letter Instance.
-Examples include but are not limited to the following Input Placeholders to be configured:
-List Builder
-Attachment Selection
-Fragment Selection
-Option Selection
-Number
-Date
-Text
-Input Group
-Boolean
-Examples include but are not limited to the following user Input Field formatting options:
-Bold
-Initialize
-Underline
-Bulleted list
-Conditional Logic for Templates will be included in a separate use case.
+1.	The main flow captures the user specifying the style they are going to use before the content is populated vs the alternate flow captures the user’s ability to style existing content to something other than what it’s currently styled as.
