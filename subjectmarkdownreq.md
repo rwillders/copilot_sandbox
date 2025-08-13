@@ -1,3 +1,7 @@
+Initiative Name: Capability to Utilize Calculations in the Template Manager
+
+Epic Name: Ability to use Calculations in the Template Manager
+
 TEMPLATES_003400 User Manages Calculations in the Content of a template
 Description: While building out the Letter Instance, the user needs the ability to utilize calculator functions within the direct content of the template. The calculator functions that will be available are addition, subtraction, multiplication, division, and the modulus operator.
 
