@@ -1,33 +1,38 @@
-Initiative Name: Capability to Style and Set Fonts within the Content of a Template Version 
+Initiative Name: Capability to Utilize Calculations in the Template Manager
 
-Epic Names:
-1. Ability to Style and Set Fonts within the Content of a Template Version
+Epic Name: Ability to use Calculations in the Template Manager
 
-TEMPLATES_003450 User Manages the Style of Content within a template
-Description: For content of a template, users are able to specify the style of content to be applied to the rendered PDF of a Letter Instance. Styling the content of a letter can be done multiple ways and is useful for ensuring clarity, readability, and consistency when creating letters.
+TEMPLATES_003400 User Manages Calculations in the Content of a template
+Description: While building out the Letter Instance, the user needs the ability to utilize calculator functions within the direct content of the template. The calculator functions that will be available are addition, subtraction, multiplication, division, and the modulus operator.
+
 Line(s) of Business: All Lines of Businesses
+
 Primary Actor(s):
+
 Changeset Editor
-1.	Goal: The user needs the ability to specify the style of content in the rendered PDF of a Letter Instance. 
+
+Description: The primary actor for this use case needs to be the user who is actively making changes and edits within the content of the letter which would be 'Users who edit templates'.
 List of Abilities:
-Changeset editors are able to:
-1.	Define the style of the following content in a ‘Draft’ template:
-a.	Static Text
-b.	Input Placeholders
-c.	Data Resource Field Placeholders
-d.	Calculation Result Placeholders
-2.	Define the paragraph heading style of the content.
-3.	Define the font size of the content.
-4.	Define the font type of the content from a list of pre-defined fonts.
-5.	Define the style of text of the content (Bold, Italicize, Underline). 
+
+Users who edit Templates are able to:
+
+Identify where in the content of the Template they want the calculation placeholder to appear.
+Use rational numbers from the calculator as well as pull in numeric data fields to be used within the calculations.
+Use parenthesis to control the order of operations executed.
+Use addition, subtraction, multiplication, division, and modulus operators within the calculations.
+The calculation placeholder is shown within the content of a template.
 Preconditions:
-1.	There is a Template to be edited in ‘Draft’ Status. 
+
+The user is in the content of a Template in the 'Draft' status.
 Postconditions: 
-1.	The style in a Template will be reflected in the rendered Letter Instance. 
-Main Flow: Set the Settings, Present Content
-1.	The user provides the settings for the style of the content to be added to the template.
-2.	The user provides content that uses the provided style settings. 
-Alternate Flow: Present Content, Set the Settings 
-1.	The user selects existing content and updates the style setting for that content. 
-Notes:
-1.	The main flow captures the user specifying the style they are going to use before the content is populated vs the alternate flow captures the user’s ability to style existing content to something other than what it’s currently styled as.
+
+The Template contains the calculation placeholder within the content of the template.
+Main Flow:
+
+The user selects where they want the calculation placeholder to appear in the content of the template.
+The user selects the calculator.
+The user is able to select numeric data fields as well as rational numbers on the calculator to be used in the calculations.
+The user is able to do the following functions: addition, subtraction, multiplication, division, and modulus operations.
+The user is able to use parenthesis to control the order of operations executed.
+The user is able to select the number of decimal places to round to.
+Once the user has created their formula, the calculation placeholder is inserted into the content of the template.
