@@ -3,7 +3,6 @@ Initiative Name: Capability to Utilize Calculations in the Template Manager
 Epic Name: Ability to use Calculator Functions while Configuring Rules for Conditional Logic
 
 TEMPLATES_003000 User manages Conditional Logic in the Content of a Template
-Use Case ID: TEMPLATES_003000
 
 Description: Letters will often need to vary their content based on values either provided by the letter creator or related to the work object with which the Letter Instance is associated. To allow this dynamic letter content, the user who creates Templates needs the ability to define the conditions under which the letter content will change and to provide the content that will display under those various conditions. This use case is meant to inform what the user’s abilities are regarding this conditional content.
 
@@ -83,7 +82,9 @@ User is editing a template.
 Post Conditions:
 The Template is designed to display certain content only when given conditions are met.
 
+
 TEMPLATES_003450 User Manages the Style of Content within a template
+
 Description: For content of a template, users are able to specify the style of content to be applied to the rendered PDF of a Letter Instance. Styling the content of a letter can be done multiple ways and is useful for ensuring clarity, readability, and consistency when creating letters.
 
 Line(s) of Business: All Lines of Businesses
