@@ -24,11 +24,11 @@ Secondary Actor(s): N/A
 List of Abilities:
 1.	The user is able to create Letter Restrictions for a ‘Full’ Template Version that is in ‘Draft’ Status.
    a.	The user is able to create one of the following restrictions for a Template Version:
-      i.	The restriction makes the letter visible to the Letter Editor, but unavailable for them to create.
-         1).	The user is required to enter a message to be displayed to the Letter Editor explaining why the Letter is not available to be created.
-      ii.	The restriction prevents the letter from being visible to the Letter user for creation entirely.
-   b.	The user is able to specify conditional logic under which a Letter Restriction will apply to a Template Version (see note below for VBMSR-34336 guidance on building conditional equations).
-   c.	The user is able to specify that a Letter Restriction for a Template Version is based upon the existence of ‘Draft’ Letter Instances associated with the Workflow Instance the Letter Editor is currently working.
+  	   i. The restriction makes the letter visible to the Letter Editor, but unavailable for them to create.
+  	      1). The user is required to enter a message to be displayed to the Letter Editor explaining why the Letter is not available to be created.
+  	   ii. The restriction prevents the letter from being visible to the Letter user for creation entirely.
+  	b. The user is able to specify conditional logic under which a Letter Restriction will apply to a Template Version (see note below for VBMSR-34336 guidance on building conditional equations).
+  	c. The user is able to specify that a Letter Restriction for a Template Version is based upon the existence of ‘Draft’ Letter Instances associated with the Workflow Instance the Letter Editor is currently working.
       i.	The user is required to select the Template(s) that will block the creation of a new Letter Instance.
       ii.	The user is required to enter a message to be displayed to the Letter Editor explaining why the Letter is not available to be created.
    d.	The user is able to specify the following Letter Restrictions for letters that can only be created or finalized by a request from an external System Actor:
