@@ -10,9 +10,9 @@ Use Case ID: TEMPLATES_003600
 
 Description:
 
-Letter Editors select, organize, and optionally create custom Field Group occurrences from Data Resources to curate the content displayed on a Letter Instance. This is accomplished through a configured Field Group Option Selection Input, which allows users to choose from system-generated Field Group entries, arrange them in sequence, and add custom entries when permitted.
+Letter Restrictions ensure that users within ECM-L meet any predefined conditions required by a particular Letter.  Within ECM-L, these restrictions are defined as conditional tests that must be satisfied before that Template Version can be used to create a Letter Instance.  In some cases, specific restrictions must be associated with the Template Version that generates a given letter.
 
-To support this functionality, users who manage Templates within a Changeset must be able to define the conditional data requirements for Letter Restrictions. This use case describes the capabilities required for users to create and manage these conditional rules. 
+To support this functionality, users who manage Templates within a Changeset must be able to define the conditional data requirements for Letter Restrictions.  This use case describes the capabilities required for users to create and manage these conditional rules.
 
 Line(s) of Business: All Lines of Business (LoB)
 
