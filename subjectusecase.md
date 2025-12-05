@@ -8,7 +8,8 @@ Use Case Name: User Manages Letter Restrictions
 
 Use Case ID: TEMPLATES_003600
 
-Description: Letter Editors select, organize, and optionally create custom Field Group occurrences from Data Resources to curate the content displayed on a Letter Instance. This is accomplished through a configured Field Group Option Selection Input, which allows users to choose from system-generated Field Group entries, arrange them in sequence, and add custom entries when permitted.
+Description: 
+Letter Editors select, organize, and optionally create custom Field Group occurrences from Data Resources to curate the content displayed on a Letter Instance. This is accomplished through a configured Field Group Option Selection Input, which allows users to choose from system-generated Field Group entries, arrange them in sequence, and add custom entries when permitted.
 To support this functionality, users who manage Templates within a Changeset must be able to define the conditional data requirements for Letter Restrictions. This use case describes the capabilities required for users to create and manage these conditional rules. 
 
 Line(s) of Business: All Lines of Business (LoB)
